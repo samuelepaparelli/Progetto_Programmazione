@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_6KQpwDWEEeudXMS5jWQQDQ" name="NewModel">
+  <packagedElement xmi:type="uml:Actor" xmi:id="_-3EXIDWEEeudXMS5jWQQDQ" name="Utente">
+    <eAnnotations xmi:id="_-3GMUDWEEeudXMS5jWQQDQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details xmi:id="_-3GMUTWEEeudXMS5jWQQDQ" key="Human"/>
+    </eAnnotations>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_sh32UDYlEeudXMS5jWQQDQ" name="visualizza siti contenente il cognome">
+    <extend xmi:id="_0lzo0DYrEeudXMS5jWQQDQ" extendedCase="_01pYcDYnEeudXMS5jWQQDQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_01pYcDYnEeudXMS5jWQQDQ" name="visualizza statistiche siti"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_BEvLgDYoEeudXMS5jWQQDQ" name="visualizza statistiche siti per filtro"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_gUF4kDYqEeudXMS5jWQQDQ" memberEnd="_gUGfoDYqEeudXMS5jWQQDQ _gUHGsDYqEeudXMS5jWQQDQ">
+    <ownedEnd xmi:id="_gUGfoDYqEeudXMS5jWQQDQ" type="_-3EXIDWEEeudXMS5jWQQDQ" association="_gUF4kDYqEeudXMS5jWQQDQ"/>
+    <ownedEnd xmi:id="_gUHGsDYqEeudXMS5jWQQDQ" type="_sh32UDYlEeudXMS5jWQQDQ" association="_gUF4kDYqEeudXMS5jWQQDQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_gxe_MDYqEeudXMS5jWQQDQ" memberEnd="_gxe_MTYqEeudXMS5jWQQDQ _gxe_MjYqEeudXMS5jWQQDQ">
+    <ownedEnd xmi:id="_gxe_MTYqEeudXMS5jWQQDQ" type="_-3EXIDWEEeudXMS5jWQQDQ" association="_gxe_MDYqEeudXMS5jWQQDQ"/>
+    <ownedEnd xmi:id="_gxe_MjYqEeudXMS5jWQQDQ" type="_01pYcDYnEeudXMS5jWQQDQ" association="_gxe_MDYqEeudXMS5jWQQDQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_hJDxsDYqEeudXMS5jWQQDQ" memberEnd="_hJDxsTYqEeudXMS5jWQQDQ _hJDxsjYqEeudXMS5jWQQDQ">
+    <ownedEnd xmi:id="_hJDxsTYqEeudXMS5jWQQDQ" type="_-3EXIDWEEeudXMS5jWQQDQ" association="_hJDxsDYqEeudXMS5jWQQDQ"/>
+    <ownedEnd xmi:id="_hJDxsjYqEeudXMS5jWQQDQ" type="_BEvLgDYoEeudXMS5jWQQDQ" association="_hJDxsDYqEeudXMS5jWQQDQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_9no5QDZ5EeuWrbrULq3w_w" name="OPProjectDomainsdb"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_V1ztcDZ6EeuWrbrULq3w_w" name="Domain" visibility="public">
+    <ownedComment xmi:id="_13pcoDjHEeuCfLogZSBezg" annotatedElement="_V1ztcDZ6EeuWrbrULq3w_w">
+      <body>cosa deve fare il programma ?&#xD;
+1 oggetto in ingresso una URL GET, fa il suo lavoro e output una string json&#xD;
+2 oggetto in ingresso una stringaJSON, fa il suo lavoro e output array di oggetti Domain&#xD;
+3 oggetto in ingresso un array di oggetti Domain , fa qui il lavoro di filtraggio. output array di oggetto Domain&#xD;
+4  interfaccia o  oggetto in ingresso un array di oggetti Domain , fa qui il lavoro di statistiche , output un hashmap&#xD;
+5 oggetto in ingresso hashmap ,fa qui la conversione hashmapjson , output StringaJSON che andra sul mappingdi Springboot&#xD;
+&#xD;
+&#xD;
+&#xD;
+</body>
+    </ownedComment>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_nwgYcDZ6EeuWrbrULq3w_w" name="DomainJSONConverter" visibility="public"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_9bhBcDZ8EeuWrbrULq3w_w" name="DomainFilter" visibility="public"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_VCtqUDZ_EeuWrbrULq3w_w" name="APIJSONReceiver" visibility="public"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_7vy2sDdREeuVHumLiHbGuw" name="(abstract)DomainServices" visibility="public" isAbstract="true">
+    <ownedAttribute xmi:id="_E_K8wDjFEeuCfLogZSBezg" name="Vector&lt;Domain>"/>
+    <ownedOperation xmi:id="_G6bvkDjFEeuCfLogZSBezg" name="output"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_je8FcDdSEeuVHumLiHbGuw" name="JSONObject" visibility="public"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_tqhvsDdSEeuVHumLiHbGuw" memberEnd="_tqhvsTdSEeuVHumLiHbGuw _tqhvtDdSEeuVHumLiHbGuw" navigableOwnedEnd="_tqhvsTdSEeuVHumLiHbGuw _tqhvtDdSEeuVHumLiHbGuw">
+    <ownedEnd xmi:id="_tqhvsTdSEeuVHumLiHbGuw" name="domainAPIReceivers" type="_VCtqUDZ_EeuWrbrULq3w_w" association="_tqhvsDdSEeuVHumLiHbGuw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_tqhvsjdSEeuVHumLiHbGuw"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_tqhvszdSEeuVHumLiHbGuw" value="*"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_tqhvtDdSEeuVHumLiHbGuw" name="jSONs" type="_je8FcDdSEeuVHumLiHbGuw" association="_tqhvsDdSEeuVHumLiHbGuw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_tqhvtTdSEeuVHumLiHbGuw"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_tqhvtjdSEeuVHumLiHbGuw" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_u6m3gDdSEeuVHumLiHbGuw" memberEnd="_u6m3gTdSEeuVHumLiHbGuw _u6m3hDdSEeuVHumLiHbGuw" navigableOwnedEnd="_u6m3gTdSEeuVHumLiHbGuw _u6m3hDdSEeuVHumLiHbGuw">
+    <ownedEnd xmi:id="_u6m3gTdSEeuVHumLiHbGuw" name="domainJSONParsers" type="_nwgYcDZ6EeuWrbrULq3w_w" association="_u6m3gDdSEeuVHumLiHbGuw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_u6m3gjdSEeuVHumLiHbGuw"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_u6m3gzdSEeuVHumLiHbGuw" value="*"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_u6m3hDdSEeuVHumLiHbGuw" name="jSONs" type="_je8FcDdSEeuVHumLiHbGuw" association="_u6m3gDdSEeuVHumLiHbGuw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_u6m3hTdSEeuVHumLiHbGuw"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_u6m3hjdSEeuVHumLiHbGuw" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_v3U-cDdSEeuVHumLiHbGuw" memberEnd="_v3U-cTdSEeuVHumLiHbGuw _v3U-dDdSEeuVHumLiHbGuw" navigableOwnedEnd="_v3U-cTdSEeuVHumLiHbGuw _v3U-dDdSEeuVHumLiHbGuw">
+    <ownedEnd xmi:id="_v3U-cTdSEeuVHumLiHbGuw" name="domainJSONParsers" type="_nwgYcDZ6EeuWrbrULq3w_w" association="_v3U-cDdSEeuVHumLiHbGuw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_v3U-cjdSEeuVHumLiHbGuw"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_v3U-czdSEeuVHumLiHbGuw" value="*"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_v3U-dDdSEeuVHumLiHbGuw" name="domains" type="_V1ztcDZ6EeuWrbrULq3w_w" association="_v3U-cDdSEeuVHumLiHbGuw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_v3U-dTdSEeuVHumLiHbGuw"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_v3U-djdSEeuVHumLiHbGuw" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_wk7EQDdSEeuVHumLiHbGuw" memberEnd="_wk7EQTdSEeuVHumLiHbGuw _wk7ERDdSEeuVHumLiHbGuw" navigableOwnedEnd="_wk7EQTdSEeuVHumLiHbGuw _wk7ERDdSEeuVHumLiHbGuw">
+    <ownedEnd xmi:id="_wk7EQTdSEeuVHumLiHbGuw" name="domainFilters" type="_9bhBcDZ8EeuWrbrULq3w_w" association="_wk7EQDdSEeuVHumLiHbGuw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_wk7EQjdSEeuVHumLiHbGuw"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_wk7EQzdSEeuVHumLiHbGuw" value="*"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_wk7ERDdSEeuVHumLiHbGuw" name="domains" type="_V1ztcDZ6EeuWrbrULq3w_w" association="_wk7EQDdSEeuVHumLiHbGuw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_wk7ERTdSEeuVHumLiHbGuw"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_wk7ERjdSEeuVHumLiHbGuw" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_6k57cDdSEeuVHumLiHbGuw" memberEnd="_6k57cTdSEeuVHumLiHbGuw _6k57dDdSEeuVHumLiHbGuw" navigableOwnedEnd="_6k57cTdSEeuVHumLiHbGuw _6k57dDdSEeuVHumLiHbGuw">
+    <ownedEnd xmi:id="_6k57cTdSEeuVHumLiHbGuw" name="(abstract)_DomainServicess" type="_7vy2sDdREeuVHumLiHbGuw" association="_6k57cDdSEeuVHumLiHbGuw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_6k57cjdSEeuVHumLiHbGuw"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_6k57czdSEeuVHumLiHbGuw" value="*"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_6k57dDdSEeuVHumLiHbGuw" name="domainJSONParsers" type="_nwgYcDZ6EeuWrbrULq3w_w" association="_6k57cDdSEeuVHumLiHbGuw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_6k57dTdSEeuVHumLiHbGuw"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_6k57djdSEeuVHumLiHbGuw" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_7KfUwDdSEeuVHumLiHbGuw" memberEnd="_7KfUwTdSEeuVHumLiHbGuw _7KfUxDdSEeuVHumLiHbGuw" navigableOwnedEnd="_7KfUwTdSEeuVHumLiHbGuw _7KfUxDdSEeuVHumLiHbGuw">
+    <ownedEnd xmi:id="_7KfUwTdSEeuVHumLiHbGuw" name="(abstract)_DomainServicess" type="_7vy2sDdREeuVHumLiHbGuw" association="_7KfUwDdSEeuVHumLiHbGuw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7KfUwjdSEeuVHumLiHbGuw"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7KfUwzdSEeuVHumLiHbGuw" value="*"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_7KfUxDdSEeuVHumLiHbGuw" name="domainFilters" type="_9bhBcDZ8EeuWrbrULq3w_w" association="_7KfUwDdSEeuVHumLiHbGuw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7KfUxTdSEeuVHumLiHbGuw"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7KfUxjdSEeuVHumLiHbGuw" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_V_yRMDjdEeuCfLogZSBezg" name="(interface)Statistica" visibility="public">
+    <ownedOperation xmi:id="_g0ZDQDjdEeuCfLogZSBezg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_C3EecDjeEeuCfLogZSBezg" name="DomainAnalyzer" visibility="public">
+    <interfaceRealization xmi:id="_L-vNkDjeEeuCfLogZSBezg" client="_C3EecDjeEeuCfLogZSBezg" supplier="_V_yRMDjdEeuCfLogZSBezg" contract="_V_yRMDjdEeuCfLogZSBezg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_RHeB8DjeEeuCfLogZSBezg" memberEnd="_RHeB8TjeEeuCfLogZSBezg _RHeB9DjeEeuCfLogZSBezg" navigableOwnedEnd="_RHeB8TjeEeuCfLogZSBezg _RHeB9DjeEeuCfLogZSBezg">
+    <ownedEnd xmi:id="_RHeB8TjeEeuCfLogZSBezg" name="(abstract)DomainServicess" type="_7vy2sDdREeuVHumLiHbGuw" association="_RHeB8DjeEeuCfLogZSBezg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RHeB8jjeEeuCfLogZSBezg"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RHeB8zjeEeuCfLogZSBezg" value="*"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_RHeB9DjeEeuCfLogZSBezg" name="domainAnalyzers" type="_C3EecDjeEeuCfLogZSBezg" association="_RHeB8DjeEeuCfLogZSBezg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RHeB9TjeEeuCfLogZSBezg"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RHeB9jjeEeuCfLogZSBezg" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_Qmto0DjfEeuCfLogZSBezg" memberEnd="_Qmto0TjfEeuCfLogZSBezg _Qmto1DjfEeuCfLogZSBezg" navigableOwnedEnd="_Qmto0TjfEeuCfLogZSBezg _Qmto1DjfEeuCfLogZSBezg">
+    <ownedEnd xmi:id="_Qmto0TjfEeuCfLogZSBezg" name="domainAnalyzers" type="_C3EecDjeEeuCfLogZSBezg" association="_Qmto0DjfEeuCfLogZSBezg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Qmto0jjfEeuCfLogZSBezg"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Qmto0zjfEeuCfLogZSBezg" value="*"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_Qmto1DjfEeuCfLogZSBezg" name="domains" type="_V1ztcDZ6EeuWrbrULq3w_w" association="_Qmto0DjfEeuCfLogZSBezg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Qmto1TjfEeuCfLogZSBezg"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Qmto1jjfEeuCfLogZSBezg" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_ZbLvIDjfEeuCfLogZSBezg" name="HashMap" visibility="public"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_blylgDjfEeuCfLogZSBezg" memberEnd="_blylgTjfEeuCfLogZSBezg _blylhDjfEeuCfLogZSBezg" navigableOwnedEnd="_blylgTjfEeuCfLogZSBezg _blylhDjfEeuCfLogZSBezg">
+    <ownedEnd xmi:id="_blylgTjfEeuCfLogZSBezg" name="domainAnalyzers" type="_C3EecDjeEeuCfLogZSBezg" association="_blylgDjfEeuCfLogZSBezg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_blylgjjfEeuCfLogZSBezg"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_blylgzjfEeuCfLogZSBezg" value="*"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_blylhDjfEeuCfLogZSBezg" name="hashMaps" type="_ZbLvIDjfEeuCfLogZSBezg" association="_blylgDjfEeuCfLogZSBezg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_blylhTjfEeuCfLogZSBezg"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_blylhjjfEeuCfLogZSBezg" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_jz9O4DjhEeuCfLogZSBezg" name="JSONExpection" visibility="public"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_lt394DjhEeuCfLogZSBezg" memberEnd="_lt394TjhEeuCfLogZSBezg _lt395DjhEeuCfLogZSBezg" navigableOwnedEnd="_lt394TjhEeuCfLogZSBezg _lt395DjhEeuCfLogZSBezg">
+    <ownedEnd xmi:id="_lt394TjhEeuCfLogZSBezg" name="aPIJSONReceivers" type="_VCtqUDZ_EeuWrbrULq3w_w" association="_lt394DjhEeuCfLogZSBezg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_lt394jjhEeuCfLogZSBezg"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_lt394zjhEeuCfLogZSBezg" value="*"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_lt395DjhEeuCfLogZSBezg" name="jSONExpections" type="_jz9O4DjhEeuCfLogZSBezg" association="_lt394DjhEeuCfLogZSBezg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_lt395TjhEeuCfLogZSBezg"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_lt395jjhEeuCfLogZSBezg" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_mIlj8DjhEeuCfLogZSBezg" memberEnd="_mIlj8TjhEeuCfLogZSBezg _mIlj9DjhEeuCfLogZSBezg" navigableOwnedEnd="_mIlj8TjhEeuCfLogZSBezg _mIlj9DjhEeuCfLogZSBezg">
+    <ownedEnd xmi:id="_mIlj8TjhEeuCfLogZSBezg" name="domainJSONConverters" type="_nwgYcDZ6EeuWrbrULq3w_w" association="_mIlj8DjhEeuCfLogZSBezg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_mIlj8jjhEeuCfLogZSBezg"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_mIlj8zjhEeuCfLogZSBezg" value="*"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_mIlj9DjhEeuCfLogZSBezg" name="jSONExpections" type="_jz9O4DjhEeuCfLogZSBezg" association="_mIlj8DjhEeuCfLogZSBezg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_mIlj9TjhEeuCfLogZSBezg"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_mIlj9jjhEeuCfLogZSBezg" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+</uml:Model>
