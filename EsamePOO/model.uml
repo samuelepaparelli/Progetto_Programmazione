@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_07114DufEeumBMhtmxzwXA" name="EsameModel">
+  <packageImport xmi:id="_7UK60D4ZEeu1APL5aqTE7A">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Package" xmi:id="_5MM30DufEeumBMhtmxzwXA" name="service">
+    <packagedElement xmi:type="uml:Class" xmi:id="_9uMcUDufEeumBMhtmxzwXA" name="ParserJSON" visibility="public"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_0bahAD4eEeu1APL5aqTE7A" name="FileJSON" visibility="public"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_LQs_EDugEeumBMhtmxzwXA" name="model">
+    <packagedElement xmi:type="uml:Class" xmi:id="_TbJQ8DugEeumBMhtmxzwXA" name="domains" visibility="public">
+      <ownedAttribute xmi:id="_bpTskD4OEeu1APL5aqTE7A" name="Vector"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_foT4wD4OEeu1APL5aqTE7A" name="metadati" visibility="public">
+      <ownedAttribute xmi:id="_h-iJQD4OEeu1APL5aqTE7A" name="domain">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_1DjRUD4ZEeu1APL5aqTE7A" name="create_date">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_1SQbsD4ZEeu1APL5aqTE7A" name="update_date">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_5gvOUD4ZEeu1APL5aqTE7A" name="isDead">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_5mPZYD4ZEeu1APL5aqTE7A" name="country">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_PWzZID4OEeu1APL5aqTE7A" name="util">
+    <packagedElement xmi:type="uml:Package" xmi:id="_SLHT0D4OEeu1APL5aqTE7A" name="stats"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_T2OKwD4OEeu1APL5aqTE7A" name="filter"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_TsaSAD4PEeu1APL5aqTE7A" name="excpetion"/>
+  <packagedElement xmi:type="uml:Package" xmi:id="_D3omID4ZEeu1APL5aqTE7A" name="controller">
+    <packagedElement xmi:type="uml:Class" xmi:id="_FmbqQD4ZEeu1APL5aqTE7A" name="controllerClass" visibility="public"/>
+  </packagedElement>
+</uml:Model>
