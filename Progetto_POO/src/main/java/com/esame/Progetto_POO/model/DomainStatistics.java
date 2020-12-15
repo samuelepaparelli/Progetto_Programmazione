@@ -13,6 +13,6 @@ public interface DomainStatistics {
 	 * Metodo per contare il numero di domini ottenuti
 	 * @return numero dei elementi presenti nel vettore
 	 */
-	public abstract int quantity(Vector<Domain> domains);
+	public abstract int quantity();
 
 }
