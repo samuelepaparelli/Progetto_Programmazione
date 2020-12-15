@@ -1,6 +1,6 @@
 package com.esame.Progetto_POO.model;
 /**
- * 
+ * Modello che descrive i metadati di un dominio.
  * @author Samuele Paparelli Chen Lei
  *
  */
