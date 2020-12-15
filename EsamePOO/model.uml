@@ -5,11 +5,31 @@
   </packageImport>
   <packagedElement xmi:type="uml:Package" xmi:id="_5MM30DufEeumBMhtmxzwXA" name="service">
     <packagedElement xmi:type="uml:Class" xmi:id="_wiIHwD7NEeuJwMVPU45OUQ" name="Filter" visibility="public">
-      <ownedOperation xmi:id="_wiIHwT7NEeuJwMVPU45OUQ" name="filtraPerNazione"/>
-      <ownedOperation xmi:id="_wiIHwj7NEeuJwMVPU45OUQ" name="filtraPerTipologia"/>
-      <ownedOperation xmi:id="_wiIHwz7NEeuJwMVPU45OUQ" name="getFilteredDomains"/>
+      <ownedAttribute xmi:id="_4cebQD7lEeu_YsLnCk4Z6A" name="domains" type="_oZOkoD7mEeu_YsLnCk4Z6A">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_oYYQED7mEeu_YsLnCk4Z6A" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_oYY3ID7mEeu_YsLnCk4Z6A" value="1"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_6n2GoD7lEeu_YsLnCk4Z6A" name="getDomains"/>
+      <ownedOperation xmi:id="_wiIHwT7NEeuJwMVPU45OUQ" name="filterByNations"/>
+      <ownedOperation xmi:id="_wiIHwj7NEeuJwMVPU45OUQ" name="filterByType"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_GYQtkD7OEeuJwMVPU45OUQ" name="Stats" visibility="public"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_GYQtkD7OEeuJwMVPU45OUQ" name="Stats" visibility="public">
+      <ownedAttribute xmi:id="_8zb0cD7lEeu_YsLnCk4Z6A" name="domains" type="_oZOkoD7mEeu_YsLnCk4Z6A">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_otDfkD7mEeu_YsLnCk4Z6A" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_otEGoD7mEeu_YsLnCk4Z6A" value="1"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_75SgYD7lEeu_YsLnCk4Z6A" name="getDomains"/>
+      <ownedOperation xmi:id="_HGw64D7lEeu_YsLnCk4Z6A" name="quantity"/>
+      <ownedOperation xmi:id="_IIFN8D7lEeu_YsLnCk4Z6A" name="averageUpdateTime"/>
+      <ownedOperation xmi:id="_Jjy-AD7lEeu_YsLnCk4Z6A" name="hostingNations"/>
+      <ownedOperation xmi:id="_tdlr0D7lEeu_YsLnCk4Z6A" name="type"/>
+      <ownedOperation xmi:id="_alh5UD7oEeu_YsLnCk4Z6A" name="viewStats"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_6ZunkD7kEeu_YsLnCk4Z6A" name="DomainService" visibility="public" isAbstract="true">
+      <ownedAttribute xmi:id="_9Kb0oD7kEeu_YsLnCk4Z6A" name="domains : Vector&lt;Domain>"/>
+      <ownedOperation xmi:id="__aH_UD7kEeu_YsLnCk4Z6A" name="getDomains"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_oZOkoD7mEeu_YsLnCk4Z6A" name="Vector&lt;Domain> :  "/>
   </packagedElement>
   <packagedElement xmi:type="uml:Package" xmi:id="_LQs_EDugEeumBMhtmxzwXA" name="model">
     <packagedElement xmi:type="uml:Class" xmi:id="_foT4wD4OEeu1APL5aqTE7A" name="Domain" visibility="public">
@@ -34,17 +54,34 @@
       <ownedOperation xmi:id="_acCXMD7JEeuJwMVPU45OUQ" name="toString"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Interface" xmi:id="_TaqRED7HEeuJwMVPU45OUQ" name="DomainStatistics" visibility="public">
-      <ownedOperation xmi:id="_PML2wD7NEeuJwMVPU45OUQ" name="quantita"/>
-      <ownedOperation xmi:id="_Q4yigD7NEeuJwMVPU45OUQ" name="tempoMedioUpdate"/>
-      <ownedOperation xmi:id="_fXYTAD7NEeuJwMVPU45OUQ" name="nazioniHosting"/>
-      <ownedOperation xmi:id="_fn6pYD7NEeuJwMVPU45OUQ" name="tipologia"/>
+      <ownedOperation xmi:id="_PML2wD7NEeuJwMVPU45OUQ" name="quantity"/>
+      <ownedOperation xmi:id="_Q4yigD7NEeuJwMVPU45OUQ" name="averageUpdateTime"/>
+      <ownedOperation xmi:id="_fXYTAD7NEeuJwMVPU45OUQ" name="hostingNations"/>
+      <ownedOperation xmi:id="_fn6pYD7NEeuJwMVPU45OUQ" name="type"/>
     </packagedElement>
   </packagedElement>
   <packagedElement xmi:type="uml:Package" xmi:id="_PWzZID4OEeu1APL5aqTE7A" name="util">
-    <packagedElement xmi:type="uml:Class" xmi:id="_xWrKID7NEeuJwMVPU45OUQ" name="ReaderJSON" visibility="public"/>
-    <packagedElement xmi:type="uml:Class" xmi:id="_WSadID7OEeuJwMVPU45OUQ" name="ParserJSON" visibility="public"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_xWrKID7NEeuJwMVPU45OUQ" name="ReaderJSON" visibility="public">
+      <ownedOperation xmi:id="_CZ5jID7lEeu_YsLnCk4Z6A" name="readFromURL"/>
+      <ownedOperation xmi:id="_EzkwQD7lEeu_YsLnCk4Z6A" name="readFromFile"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_WSadID7OEeuJwMVPU45OUQ" name="ParserJSON" visibility="public">
+      <ownedOperation xmi:id="_PuCn0D7nEeu_YsLnCk4Z6A" name="parse"/>
+    </packagedElement>
   </packagedElement>
-  <packagedElement xmi:type="uml:Package" xmi:id="_TsaSAD4PEeu1APL5aqTE7A" name="exception"/>
+  <packagedElement xmi:type="uml:Package" xmi:id="_TsaSAD4PEeu1APL5aqTE7A" name="exception">
+    <packagedElement xmi:type="uml:Class" xmi:id="_sZXdcD7fEeu_YsLnCk4Z6A" name="NoResultException" visibility="public"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_fDyp0D7nEeu_YsLnCk4Z6A" name=" " memberEnd="_fDyp0T7nEeu_YsLnCk4Z6A _fDyp1D7nEeu_YsLnCk4Z6A" navigableOwnedEnd="_fDyp0T7nEeu_YsLnCk4Z6A _fDyp1D7nEeu_YsLnCk4Z6A">
+      <ownedEnd xmi:id="_fDyp0T7nEeu_YsLnCk4Z6A" name="" type="_sZXdcD7fEeu_YsLnCk4Z6A" association="_fDyp0D7nEeu_YsLnCk4Z6A">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_fDyp0j7nEeu_YsLnCk4Z6A"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_fDyp0z7nEeu_YsLnCk4Z6A" value="*"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_fDyp1D7nEeu_YsLnCk4Z6A" name="" type="_WSadID7OEeuJwMVPU45OUQ" association="_fDyp0D7nEeu_YsLnCk4Z6A">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_fDyp1T7nEeu_YsLnCk4Z6A"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_fDyp1j7nEeu_YsLnCk4Z6A" value="*"/>
+      </ownedEnd>
+    </packagedElement>
+  </packagedElement>
   <packagedElement xmi:type="uml:Package" xmi:id="_D3omID4ZEeu1APL5aqTE7A" name="controller">
     <packagedElement xmi:type="uml:Class" xmi:id="_FmbqQD4ZEeu1APL5aqTE7A" name="Controller" visibility="public"/>
   </packagedElement>
