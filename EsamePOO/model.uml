@@ -5,13 +5,10 @@
   </packageImport>
   <packagedElement xmi:type="uml:Package" xmi:id="_5MM30DufEeumBMhtmxzwXA" name="service">
     <packagedElement xmi:type="uml:Class" xmi:id="_9uMcUDufEeumBMhtmxzwXA" name="ParserJSON" visibility="public"/>
-    <packagedElement xmi:type="uml:Class" xmi:id="_0bahAD4eEeu1APL5aqTE7A" name="FileJSON" visibility="public"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_0bahAD4eEeu1APL5aqTE7A" name="ReaderJSON" visibility="public"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Package" xmi:id="_LQs_EDugEeumBMhtmxzwXA" name="model">
-    <packagedElement xmi:type="uml:Class" xmi:id="_TbJQ8DugEeumBMhtmxzwXA" name="domains" visibility="public">
-      <ownedAttribute xmi:id="_bpTskD4OEeu1APL5aqTE7A" name="Vector"/>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_foT4wD4OEeu1APL5aqTE7A" name="metadati" visibility="public">
+    <packagedElement xmi:type="uml:Class" xmi:id="_foT4wD4OEeu1APL5aqTE7A" name="Domain" visibility="public">
       <ownedAttribute xmi:id="_h-iJQD4OEeu1APL5aqTE7A" name="domain">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </ownedAttribute>
@@ -21,20 +18,25 @@
       <ownedAttribute xmi:id="_1SQbsD4ZEeu1APL5aqTE7A" name="update_date">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </ownedAttribute>
-      <ownedAttribute xmi:id="_5gvOUD4ZEeu1APL5aqTE7A" name="isDead">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
-      </ownedAttribute>
       <ownedAttribute xmi:id="_5mPZYD4ZEeu1APL5aqTE7A" name="country">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </ownedAttribute>
+      <ownedAttribute xmi:id="_5gvOUD4ZEeu1APL5aqTE7A" name="isDead">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_IV9ioD7JEeuJwMVPU45OUQ" name="equals">
+        <ownedParameter xmi:id="_J2MmUD7JEeuJwMVPU45OUQ" name="Domain"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_acCXMD7JEeuJwMVPU45OUQ" name="toString"/>
     </packagedElement>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_TaqRED7HEeuJwMVPU45OUQ" name="DomainStatistics" visibility="public"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Package" xmi:id="_PWzZID4OEeu1APL5aqTE7A" name="util">
-    <packagedElement xmi:type="uml:Package" xmi:id="_SLHT0D4OEeu1APL5aqTE7A" name="stats"/>
-    <packagedElement xmi:type="uml:Package" xmi:id="_T2OKwD4OEeu1APL5aqTE7A" name="filter"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_EJ6sUD5CEeuq0tcyYQdXUg" name="Stats" visibility="public"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_FiqA4D5CEeuq0tcyYQdXUg" name="Filter" visibility="public"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:Package" xmi:id="_TsaSAD4PEeu1APL5aqTE7A" name="excpetion"/>
+  <packagedElement xmi:type="uml:Package" xmi:id="_TsaSAD4PEeu1APL5aqTE7A" name="exception"/>
   <packagedElement xmi:type="uml:Package" xmi:id="_D3omID4ZEeu1APL5aqTE7A" name="controller">
-    <packagedElement xmi:type="uml:Class" xmi:id="_FmbqQD4ZEeu1APL5aqTE7A" name="controllerClass" visibility="public"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_FmbqQD4ZEeu1APL5aqTE7A" name="Controller" visibility="public"/>
   </packagedElement>
 </uml:Model>
