@@ -26,70 +26,70 @@ public class Domain {
 		this.isDead=isDead;
 	}
 	/**
-	 * metodo che modifica il dominio
+	 * Metodo che modifica il dominio
 	 * @param domain
 	 */
 	public void setDomain(String domain) {
 		this.domain=domain;
 	}
 	/**
-	 * metodo che ritorna il dominio
+	 * Metodo che ritorna il dominio
 	 * @return
 	 */
 	public String getDomain() {
 		return this.domain;
 	}
 	/**
-	 * metodo che modifica la data di creazione
+	 * Metodo che modifica la data di creazione
 	 * @param create_date
 	 */
 	public void setCreate_date(String create_date) {
 		this.create_date=create_date;
 	}
 	/**
-	 * metodo che ritorna la data di creazione del sito
+	 * Metodo che ritorna la data di creazione del sito
 	 * @return 
 	 */
 	public String getCreate_date() {
 		return this.create_date;
 	}
 	/**
-	 * metodo che modifica la data di aggiornamento
+	 * Metodo che modifica la data di aggiornamento
 	 * @param update_date
 	 */
 	public void setUpdate_date(String update_date) {
 		this.update_date=update_date;
 	}
 	/**
-	 * metodo che ritorna la data di aggiornamento
+	 * Metodo che ritorna la data di aggiornamento
 	 * @return
 	 */
 	public String getUpdate_date() {
 		return this.update_date;
 	}
 	/**
-	 * metodo che modifica la nazione di hosting
+	 * Metodo che modifica la nazione di hosting
 	 * @param country
 	 */
 	public void setCountry(String country) {
 		this.country=country;
 	}
 	/**
-	 * metodo che ritorna la nazione di hosting
+	 * Metodo che ritorna la nazione di hosting
 	 * @return
 	 */
 	public String getCountry() {
 		return this.country;
 	}
 	/**
-	 * metodo che modifica il valore di isDead
+	 * Metodo che modifica il valore di isDead
 	 * @param isDead
 	 */
 	public void setIsDead(boolean isDead) {
 		this.isDead=isDead;
 	}
 	/**
-	 * metodo che ritorna il valore di isDead
+	 * Metodo che ritorna il valore di isDead
 	 * @return  il valore di isDead
 	 */
 	public boolean getIsDead() {
