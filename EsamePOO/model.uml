@@ -12,6 +12,7 @@
       <ownedOperation xmi:id="_6n2GoD7lEeu_YsLnCk4Z6A" name="getDomains"/>
       <ownedOperation xmi:id="_wiIHwT7NEeuJwMVPU45OUQ" name="filterByNations"/>
       <ownedOperation xmi:id="_wiIHwj7NEeuJwMVPU45OUQ" name="filterByType"/>
+      <ownedOperation xmi:id="_f2mtID-zEeubcvBXCLDYEw" name="filterByAlive"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_GYQtkD7OEeuJwMVPU45OUQ" name="Stats" visibility="public">
       <ownedAttribute xmi:id="_8zb0cD7lEeu_YsLnCk4Z6A" name="domains" type="_oZOkoD7mEeu_YsLnCk4Z6A">
@@ -20,9 +21,11 @@
       </ownedAttribute>
       <ownedOperation xmi:id="_75SgYD7lEeu_YsLnCk4Z6A" name="getDomains"/>
       <ownedOperation xmi:id="_HGw64D7lEeu_YsLnCk4Z6A" name="quantity"/>
+      <ownedOperation xmi:id="_O1EewD-zEeubcvBXCLDYEw" name="quantityOfAlive"/>
       <ownedOperation xmi:id="_IIFN8D7lEeu_YsLnCk4Z6A" name="averageUpdateTime"/>
       <ownedOperation xmi:id="_Jjy-AD7lEeu_YsLnCk4Z6A" name="hostingNations"/>
       <ownedOperation xmi:id="_tdlr0D7lEeu_YsLnCk4Z6A" name="type"/>
+      <ownedOperation xmi:id="_0UHoQD-1EeubcvBXCLDYEw" name="createdDate"/>
       <ownedOperation xmi:id="_alh5UD7oEeu_YsLnCk4Z6A" name="viewStats"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_6ZunkD7kEeu_YsLnCk4Z6A" name="DomainService" visibility="public" isAbstract="true">
@@ -55,9 +58,16 @@
     </packagedElement>
     <packagedElement xmi:type="uml:Interface" xmi:id="_TaqRED7HEeuJwMVPU45OUQ" name="DomainStatistics" visibility="public">
       <ownedOperation xmi:id="_PML2wD7NEeuJwMVPU45OUQ" name="quantity"/>
+      <ownedOperation xmi:id="_bA4UUD-zEeubcvBXCLDYEw" name="quantityOfAlive"/>
       <ownedOperation xmi:id="_Q4yigD7NEeuJwMVPU45OUQ" name="averageUpdateTime"/>
       <ownedOperation xmi:id="_fXYTAD7NEeuJwMVPU45OUQ" name="hostingNations"/>
       <ownedOperation xmi:id="_fn6pYD7NEeuJwMVPU45OUQ" name="type"/>
+      <ownedOperation xmi:id="_wA0AAD-1EeubcvBXCLDYEw" name="createdDate"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_5cTU8D-zEeubcvBXCLDYEw" name="DomainFilterable" visibility="public">
+      <ownedOperation xmi:id="_OtlhQD-0EeubcvBXCLDYEw" name="filterByNations"/>
+      <ownedOperation xmi:id="_PEKOMD-0EeubcvBXCLDYEw" name="filterByType"/>
+      <ownedOperation xmi:id="_PWJ9ID-0EeubcvBXCLDYEw" name="filterByAlive"/>
     </packagedElement>
   </packagedElement>
   <packagedElement xmi:type="uml:Package" xmi:id="_PWzZID4OEeu1APL5aqTE7A" name="util">
@@ -67,6 +77,7 @@
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_WSadID7OEeuJwMVPU45OUQ" name="ParserJSON" visibility="public">
       <ownedOperation xmi:id="_PuCn0D7nEeu_YsLnCk4Z6A" name="parse"/>
+      <ownedOperation xmi:id="_5C_AkD-0EeubcvBXCLDYEw" name="parseToDomain"/>
     </packagedElement>
   </packagedElement>
   <packagedElement xmi:type="uml:Package" xmi:id="_TsaSAD4PEeu1APL5aqTE7A" name="exception">
