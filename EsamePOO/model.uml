@@ -9,10 +9,12 @@
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_oYYQED7mEeu_YsLnCk4Z6A" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_oYY3ID7mEeu_YsLnCk4Z6A" value="1"/>
       </ownedAttribute>
+      <ownedAttribute xmi:id="_eaaxAEB5Eeux1dLqzy80ag" name="futils : FilterUtils&lt;Domain>"/>
       <ownedOperation xmi:id="_6n2GoD7lEeu_YsLnCk4Z6A" name="getDomains"/>
       <ownedOperation xmi:id="_wiIHwT7NEeuJwMVPU45OUQ" name="filterByNations"/>
       <ownedOperation xmi:id="_wiIHwj7NEeuJwMVPU45OUQ" name="filterByType"/>
       <ownedOperation xmi:id="_f2mtID-zEeubcvBXCLDYEw" name="filterByAlive"/>
+      <ownedOperation xmi:id="_6iEYMEB5Eeux1dLqzy80ag" name="multipleFilter"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_GYQtkD7OEeuJwMVPU45OUQ" name="Stats" visibility="public">
       <ownedAttribute xmi:id="_8zb0cD7lEeu_YsLnCk4Z6A" name="domains" type="_oZOkoD7mEeu_YsLnCk4Z6A">
@@ -56,18 +58,24 @@
       </ownedOperation>
       <ownedOperation xmi:id="_acCXMD7JEeuJwMVPU45OUQ" name="toString"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Interface" xmi:id="_TaqRED7HEeuJwMVPU45OUQ" name="DomainStatistics" visibility="public">
-      <ownedOperation xmi:id="_PML2wD7NEeuJwMVPU45OUQ" name="quantity"/>
-      <ownedOperation xmi:id="_bA4UUD-zEeubcvBXCLDYEw" name="quantityOfAlive"/>
-      <ownedOperation xmi:id="_Q4yigD7NEeuJwMVPU45OUQ" name="averageUpdateTime"/>
-      <ownedOperation xmi:id="_fXYTAD7NEeuJwMVPU45OUQ" name="hostingNations"/>
-      <ownedOperation xmi:id="_fn6pYD7NEeuJwMVPU45OUQ" name="type"/>
-      <ownedOperation xmi:id="_wA0AAD-1EeubcvBXCLDYEw" name="createdDate"/>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_TaqRED7HEeuJwMVPU45OUQ" name="Statistics" visibility="public">
+      <ownedOperation xmi:id="_RIvMoECGEeuAjo778E17uw" name="viewStats"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Interface" xmi:id="_5cTU8D-zEeubcvBXCLDYEw" name="DomainFilterable" visibility="public">
-      <ownedOperation xmi:id="_OtlhQD-0EeubcvBXCLDYEw" name="filterByNations"/>
-      <ownedOperation xmi:id="_PEKOMD-0EeubcvBXCLDYEw" name="filterByType"/>
-      <ownedOperation xmi:id="_PWJ9ID-0EeubcvBXCLDYEw" name="filterByAlive"/>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_5cTU8D-zEeubcvBXCLDYEw" name="Filterable" visibility="public">
+      <ownedTemplateSignature xmi:type="uml:RedefinableTemplateSignature" xmi:id="_IG1kwEB6Eeux1dLqzy80ag" parameter="_IG2y4EB6Eeux1dLqzy80ag">
+        <ownedParameter xmi:type="uml:ClassifierTemplateParameter" xmi:id="_IG2y4EB6Eeux1dLqzy80ag" default="_IG2y4UB6Eeux1dLqzy80ag" parameteredElement="_IG2y4UB6Eeux1dLqzy80ag">
+          <ownedDefault xmi:type="uml:Class" xmi:id="_IG2y4UB6Eeux1dLqzy80ag" name="T" templateParameter="_IG2y4EB6Eeux1dLqzy80ag"/>
+        </ownedParameter>
+      </ownedTemplateSignature>
+      <ownedOperation xmi:id="_2bPFsEB5Eeux1dLqzy80ag" name="Collection&lt;T> multipleFilter"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_IN1OgECDEeuALY6rn0DPaw" name="parsebleTo" visibility="public">
+      <ownedTemplateSignature xmi:type="uml:RedefinableTemplateSignature" xmi:id="_NW1vsECDEeuALY6rn0DPaw" parameter="_NW2WwECDEeuALY6rn0DPaw">
+        <ownedParameter xmi:type="uml:ClassifierTemplateParameter" xmi:id="_NW2WwECDEeuALY6rn0DPaw" default="_NW2WwUCDEeuALY6rn0DPaw" parameteredElement="_NW2WwUCDEeuALY6rn0DPaw">
+          <ownedDefault xmi:type="uml:Class" xmi:id="_NW2WwUCDEeuALY6rn0DPaw" name="T" templateParameter="_NW2WwECDEeuALY6rn0DPaw"/>
+        </ownedParameter>
+      </ownedTemplateSignature>
+      <ownedOperation xmi:id="_NwUmsECDEeuALY6rn0DPaw" name="Collection&lt;T>parseTo"/>
     </packagedElement>
   </packagedElement>
   <packagedElement xmi:type="uml:Package" xmi:id="_PWzZID4OEeu1APL5aqTE7A" name="util">
@@ -77,7 +85,14 @@
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_WSadID7OEeuJwMVPU45OUQ" name="ParserJSON" visibility="public">
       <ownedOperation xmi:id="_PuCn0D7nEeu_YsLnCk4Z6A" name="parse"/>
-      <ownedOperation xmi:id="_5C_AkD-0EeubcvBXCLDYEw" name="parseToDomain"/>
+      <ownedOperation xmi:id="_5C_AkD-0EeubcvBXCLDYEw" name="parseTo"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_y4HWgEB0Eeux1dLqzy80ag" name="FilterUtils" visibility="public">
+      <ownedTemplateSignature xmi:type="uml:RedefinableTemplateSignature" xmi:id="_TZioEEB6Eeux1dLqzy80ag" parameter="_TZjPIEB6Eeux1dLqzy80ag">
+        <ownedParameter xmi:type="uml:ClassifierTemplateParameter" xmi:id="_TZjPIEB6Eeux1dLqzy80ag" default="_TZjPIUB6Eeux1dLqzy80ag" parameteredElement="_TZjPIUB6Eeux1dLqzy80ag">
+          <ownedDefault xmi:type="uml:Class" xmi:id="_TZjPIUB6Eeux1dLqzy80ag" name="T" templateParameter="_TZjPIEB6Eeux1dLqzy80ag"/>
+        </ownedParameter>
+      </ownedTemplateSignature>
     </packagedElement>
   </packagedElement>
   <packagedElement xmi:type="uml:Package" xmi:id="_TsaSAD4PEeu1APL5aqTE7A" name="exception">
