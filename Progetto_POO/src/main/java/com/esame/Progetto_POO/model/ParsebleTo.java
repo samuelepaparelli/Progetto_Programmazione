@@ -3,8 +3,8 @@ package com.esame.Progetto_POO.model;
 import java.util.Collection;
 
 /**
- * 
- * @author ChenLei
+ * Classe usato per convertire una Stringa in oggetto JSON-Simple
+ * @author ChenLei   SamuelePaparelli 
  *
  * @param <T> tipo di oggetto che classe puo analizzare e convertire
  */
