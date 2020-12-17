@@ -77,6 +77,14 @@
       <ownedOperation xmi:id="_PWJ9ID-0EeubcvBXCLDYEw" name="Collection&lt;T> filterByAlive"/>
       <ownedOperation xmi:id="_2bPFsEB5Eeux1dLqzy80ag" name="Collection&lt;T> multipleFilter"/>
     </packagedElement>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_IN1OgECDEeuALY6rn0DPaw" name="parsebleToDomain" visibility="public">
+      <ownedTemplateSignature xmi:type="uml:RedefinableTemplateSignature" xmi:id="_NW1vsECDEeuALY6rn0DPaw" parameter="_NW2WwECDEeuALY6rn0DPaw">
+        <ownedParameter xmi:type="uml:ClassifierTemplateParameter" xmi:id="_NW2WwECDEeuALY6rn0DPaw" default="_NW2WwUCDEeuALY6rn0DPaw" parameteredElement="_NW2WwUCDEeuALY6rn0DPaw">
+          <ownedDefault xmi:type="uml:Class" xmi:id="_NW2WwUCDEeuALY6rn0DPaw" name="T" templateParameter="_NW2WwECDEeuALY6rn0DPaw"/>
+        </ownedParameter>
+      </ownedTemplateSignature>
+      <ownedOperation xmi:id="_NwUmsECDEeuALY6rn0DPaw" name="Collection&lt;T>parseToDomain"/>
+    </packagedElement>
   </packagedElement>
   <packagedElement xmi:type="uml:Package" xmi:id="_PWzZID4OEeu1APL5aqTE7A" name="util">
     <packagedElement xmi:type="uml:Class" xmi:id="_xWrKID7NEeuJwMVPU45OUQ" name="ReaderJSON" visibility="public">
