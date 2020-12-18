@@ -7,10 +7,6 @@ import java.util.Collection;
  * @author ChenLei SamuelePaparelli 
  *
  */
-public interface Filtrable<T> {
-	/**
-	 * Metodo astratto la cui impementazione andrà a filtrare la collezione in base alle richieste DAFARE
-	 * @return collezione di oggetti di tipo T filtrato
-	 */
-	public abstract Collection<T> MultipleFilter();
+public interface Filtrable<E,T> {
+	public abstract Collection<E> MultipleFilter(String fieldName, String operator, T value);
 }
