@@ -34,7 +34,7 @@ public class Domain {
 	}
 	/**
 	 * Metodo che ritorna il dominio
-	 * @return
+	 * @return il dominio
 	 */
 	public String getDomain() {
 		return this.domain;
@@ -43,28 +43,28 @@ public class Domain {
 	 * Metodo che modifica la data di creazione
 	 * @param create_date
 	 */
-	public void setCreate_date(String create_date) {
+	public void setCreateDate(String create_date) {
 		this.create_date=create_date;
 	}
 	/**
 	 * Metodo che ritorna la data di creazione del sito
-	 * @return 
+	 * @return data di creazione del sito
 	 */
-	public String getCreate_date() {
+	public String getCreateDate() {
 		return this.create_date;
 	}
 	/**
 	 * Metodo che modifica la data di aggiornamento
 	 * @param update_date
 	 */
-	public void setUpdate_date(String update_date) {
+	public void setUpdateDate(String update_date) {
 		this.update_date=update_date;
 	}
 	/**
 	 * Metodo che ritorna la data di aggiornamento
-	 * @return
+	 * @return ultima data aggiornata
 	 */
-	public String getUpdate_date() {
+	public String getUpdateDate() {
 		return this.update_date;
 	}
 	/**
@@ -76,7 +76,7 @@ public class Domain {
 	}
 	/**
 	 * Metodo che ritorna la nazione di hosting
-	 * @return
+	 * @return la nazione di hosting
 	 */
 	public String getCountry() {
 		return this.country;
@@ -96,17 +96,16 @@ public class Domain {
 		return this.isDead;
 	}
 	/**
-	 * Metodo toString dell'oggetto Domain
+	 * Metodo toString dell'oggetto Domain in formato JSONObject
 	 */
-	 
 	public String toString() {
-		return "Parametri del dominio: domain="+getDomain()+"create_date: "+getCreate_date()+
-				"update_date: "+getUpdate_date()+"country: "+getCountry()+"isDead: "+getIsDead();   
+		return "{\"domain\":\""+getDomain()+",\"createDate\":\""+getCreateDate()+
+				",\"updateDate\":\""+getUpdateDate()+",\"country\":\""+getCountry()+",\"isDead\":\""+getIsDead()+"\"}";   
 	}
 	/**
 	 * Metodo equals della classe Domain
-	 * @param o
-	 * @return
+	 * @param o un'altro oggetto Domain da confrontare
+	 * @return true se i due oggetti Domain hanno gli stessi attributi
 	 */
 	public boolean equals(Domain o) {
 		if(o==null) return false;

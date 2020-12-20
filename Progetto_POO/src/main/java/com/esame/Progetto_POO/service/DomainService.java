@@ -13,7 +13,7 @@ public abstract class DomainService {
 	/**
 	 * vettore di Domini che verrà usato dai servizi 
 	 */
-	Vector<Domain> domains;
+	protected Vector<Domain> domains;
 	/**
 	 * Getter del vettore di Domini
 	 * @return collezione di oggetti di tipo Domain sottoforma di vettore
