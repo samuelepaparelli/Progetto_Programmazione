@@ -11,6 +11,11 @@ import com.esame.Progetto_POO.util.FilterUtils;
  *
  */
 public class Filter extends DomainService implements Filtrable<Domain, Object> {
+	public Filter(Vector<Domain> domains) {
+		super(domains);
+		// TODO Auto-generated constructor stub
+	}
+
 	/**
 	 * oggetto FilterUtils che consente il filtraggio multiplo.
 	 */
@@ -57,7 +62,7 @@ public class Filter extends DomainService implements Filtrable<Domain, Object> {
 		Vector<Domain> out = new Vector<Domain>();
 		for(Domain item:super.getDomains()){
 			try {
-			if(item.getIsDead()!=alive)out.add(item);
+			if(item.getIsDead()^alive)out.add(item);
 			}catch(NullPointerException e){
 				
 			}

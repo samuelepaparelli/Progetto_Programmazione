@@ -15,6 +15,13 @@ public abstract class DomainService {
 	 */
 	protected Vector<Domain> domains;
 	/**
+	 * Costruttore del filtro
+	 * @param domains vettore di domini
+	 */
+	public DomainService(Vector<Domain> domains) {
+		this.domains=domains;
+	}
+	/**
 	 * Getter del vettore di Domini
 	 * @return collezione di oggetti di tipo Domain sottoforma di vettore
 	 */
