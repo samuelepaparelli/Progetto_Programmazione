@@ -16,7 +16,7 @@ public class Domain {
  * @param create_date   parametro contenente la stringa della data di creazione del dominio
  * @param update_date   parametro contenente la stringa della data di aggiornamento del dominio
  * @param country       parametro contenente la stringa della nazione di hosting
- * @param isDead        parametro contenente il booleano che restituisce true se il sito è inattivo 
+ * @param isDead        parametro contenente la stringa che restituisce true se il sito è inattivo e false se è attivo 
  */
 	public Domain(String domain,String create_date,String update_date,String country,boolean isDead) {
 		this.domain=domain;

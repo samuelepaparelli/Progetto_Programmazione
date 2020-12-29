@@ -1,5 +1,7 @@
 package com.esame.Progetto_POO.util;
+
 import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -16,7 +18,7 @@ public class ReaderJSON {
 /**
  * Metodo per la lettura del JSON da API 
  * @param url passiamo l'URL come stringa
- * @return un parametro di tipo stringa dove è contenuto il JSON
+ * @return ritorna una stringa contenente i dati JSON
  */
 	public String readFromURL(String url) {
 		
@@ -42,8 +44,25 @@ public class ReaderJSON {
 		}
 		return data;
 	}
-	
-	/*public String readFromFile() {
-		
-	}*/
+	/**
+	 *Metodo per leggere JSON da file locale 
+	 * @param nomeFile passiamo una stringa con il nome del file
+	 * @return ritorna una stringa contenente i dati del JSON
+	 */
+	public String readFromFile(String nomeFile) {
+		String data=" ";
+		String line=" ";
+		try {
+			BufferedReader in=new BufferedReader(new FileReader(nomeFile));
+			while((data=in.readLine())!=null) {
+				line+=data;
+			}
+			in.close();
+			
+		}catch(IOException e) {
+		 System.out.println("ERRORE di I/O");
+		 System.out.println(e);
+		}
+	    return line;
+	}
 }
