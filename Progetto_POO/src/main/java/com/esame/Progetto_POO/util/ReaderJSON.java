@@ -15,6 +15,7 @@ import java.net.URLConnection;
 
 
 public class ReaderJSON {
+
 /**
  * Metodo per la lettura del JSON da API 
  * @param url passiamo l'URL come stringa
