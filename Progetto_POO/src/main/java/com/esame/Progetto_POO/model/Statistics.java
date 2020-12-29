@@ -1,7 +1,5 @@
 package com.esame.Progetto_POO.model;
 
-import java.util.Vector;
-
 /**
  * Interfaccia per ottenere statistiche su una collezione di domini
  * @author ChenLei SamuelePaparelli 

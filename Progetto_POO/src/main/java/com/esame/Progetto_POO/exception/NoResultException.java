@@ -1,5 +1,14 @@
 package com.esame.Progetto_POO.exception;
+/**
+ * Classe eccezione quando non trovo l'oggetto interessato
+ * @author ChenLei SamuelePaparelli
+ *
+ */
+public class NoResultException extends Exception {
 
-public class NoResultException {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 
 }

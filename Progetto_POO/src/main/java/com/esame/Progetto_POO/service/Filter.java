@@ -13,7 +13,7 @@ import com.esame.Progetto_POO.util.FilterUtils;
 public class Filter extends DomainService implements Filtrable<Domain, Object> {
 	public Filter(Vector<Domain> domains) {
 		super(domains);
-		// TODO Auto-generated constructor stub
+		this.futils = new FilterUtils<Domain>();
 	}
 
 	/**
