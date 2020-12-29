@@ -14,44 +14,37 @@ import com.esame.Progetto_POO.model.Domain;
  * @author Lei Chen
  */
 
-public class ParserJSON extends ReaderJSON{
-	static final String URL= " ";
+public class ParserJSON {
+	
 	public Vector<Domain> domains;
+	
 /**
- * Metodo per il parsing da file o da URL	
- * @param isURL parametro passato per chiedere al metodo se fare il parsing da file o URL
- * @return ritorna una JSON String 
+ * Metodo che fa il parsing di una stringa e restituisce un oggetto JSON
+ * @param jsonString viene passata una stringa JSON
+ * @return ritorna un JSON Object
  */
 	
-	public String parse(boolean isURL) {
-		String jsonString= " ";
+	public JSONObject parse(String jsonString) {
+		JSONObject jo=null;
 		try {
-			JSONObject jo;
-			if(isURL) {
-				jo=(JSONObject) JSONValue.parseWithException(readFromURL(URL));
-				jsonString= jo.toJSONString();
-			}else {
-				jo=(JSONObject) JSONValue.parseWithException(readFromFile("localJSON.json"));
-				jsonString= jo.toJSONString();
-			}	
-		}catch (ParseException e) {
-		 e.printStackTrace();
+			jo=(JSONObject) JSONValue.parseWithException(jsonString);
+		}catch(ParseException e) {
+			e.printStackTrace();
 		}
-		return jsonString;
+		return jo;
 	}
 	/**
-	 * Metodo per la decodifica della stringa json e inserimento dei dati nel vettore domains
-	 * @param isURL parametro passato per chiedere al metodo se lavorare con la stringa presa dal file o con la stringa presa dall'API
+	 * Metodo che decodifica dati dal JSON e li inserisce in vettore
+	 * @param jo viene passato un JSON object
 	 * @return ritorna un vettore di oggetti Domain
 	 */
-	public Vector<Domain> parseTo(boolean isURL){
+	public Vector<Domain> parseTo(JSONObject jo){
 		try {
 			Domain d=null;
+			String jsonString= jo.toJSONString();
 			JSONParser parser= new JSONParser();
 			JSONObject obj;
-			if(isURL) {
-				obj=(JSONObject) parser.parse(parse(true));
-			}else obj=(JSONObject) parser.parse(parse(false));
+			obj=(JSONObject) parser.parse(jsonString);
 			JSONArray dom=(JSONArray) obj.get("domains");
 			Iterator i=dom.iterator();
 			while(i.hasNext()) {
