@@ -5,6 +5,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLConnection;
 /**
@@ -21,14 +22,17 @@ public class ReaderJSON {
  * @param url passiamo l'URL come stringa
  * @return ritorna una stringa contenente i dati JSON
  */
-	public String readFromURL(String url) {
+	public static String readFromURL(String url) {
 		
-		String data=" ";
-		String line=" ";
+		String data="";
+		String line="";
 		
 		try {
-			URLConnection openConnection = new URL(url).openConnection();
-			InputStream in= openConnection.getInputStream();
+			HttpURLConnection openConnection = (HttpURLConnection)new URL(url).openConnection();
+			InputStream in;
+			if(openConnection.getResponseCode()>=400)
+				in= openConnection.getErrorStream();
+			else in= openConnection.getInputStream();
 			try {
 				InputStreamReader inR= new InputStreamReader(in);
 				BufferedReader buf= new BufferedReader(inR);
@@ -50,9 +54,9 @@ public class ReaderJSON {
 	 * @param nomeFile passiamo una stringa con il nome del file
 	 * @return ritorna una stringa contenente i dati del JSON
 	 */
-	public String readFromFile(String nomeFile) {
-		String data=" ";
-		String line=" ";
+	public static String readFromFile(String nomeFile) {
+		String data="";
+		String line="";
 		try {
 			BufferedReader in=new BufferedReader(new FileReader(nomeFile));
 			while((data=in.readLine())!=null) {

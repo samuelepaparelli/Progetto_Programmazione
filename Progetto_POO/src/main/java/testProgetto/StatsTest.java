@@ -2,8 +2,14 @@ package testProgetto;
 
 import com.esame.Progetto_POO.model.Domain;
 import com.esame.Progetto_POO.service.Stats;
+import com.esame.Progetto_POO.util.ParserJSON;
+import com.esame.Progetto_POO.util.ReaderJSON;
 
 import java.util.Vector;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+
 import junit.framework.*;
 
 public class StatsTest extends TestCase {
@@ -36,8 +42,18 @@ public class StatsTest extends TestCase {
 		System.out.println(s1.toString());
 		assertEquals(s1.quantity(),5);
 		assertEquals(s1.quantityOfAlive(),2);
+		
+		System.out.println(Method1("game"));
 	}
-	
+	private static final String searchURL="https://api.domainsdb.info/v1/domains/search?domain=";
+
+	//@GetMapping("/{cognome}/stats")
+	//(@RequestParam(name = "name", defaultValue = "World") String nome)
+	public  String Method1(String cognome) {
+		System.out.println(searchURL+cognome);
+		Stats stats= new Stats(ParserJSON.parseTo(ReaderJSON.readFromURL(searchURL+cognome)));
+		return stats.viewStats();
+	}
 	
 	
 }

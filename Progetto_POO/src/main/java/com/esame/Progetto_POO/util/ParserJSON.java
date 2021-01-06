@@ -16,7 +16,6 @@ import com.esame.Progetto_POO.model.Domain;
 
 public class ParserJSON {
 	
-	public Vector<Domain> domains;
 	
 /**
  * Metodo che fa il parsing di una stringa e restituisce un oggetto JSON
@@ -24,7 +23,7 @@ public class ParserJSON {
  * @return ritorna un JSON Object
  */
 	
-	public JSONObject parse(String jsonString) {
+	public static JSONObject parse(String jsonString) {
 		JSONObject jo=null;
 		try {
 			jo=(JSONObject) JSONValue.parseWithException(jsonString);
@@ -38,14 +37,15 @@ public class ParserJSON {
 	 * @param jo viene passato un JSON object
 	 * @return ritorna un vettore di oggetti Domain
 	 */
-	public Vector<Domain> parseTo(JSONObject jo){
+	public static Vector<Domain> parseTo(JSONObject jo){
+		 Vector<Domain> domains = new Vector<Domain>();
 		try {
-			Domain d=null;
 			String jsonString= jo.toJSONString();
 			JSONParser parser= new JSONParser();
 			JSONObject obj;
 			obj=(JSONObject) parser.parse(jsonString);
 			JSONArray dom=(JSONArray) obj.get("domains");
+			if(dom==null)return domains;
 			Iterator i=dom.iterator();
 			while(i.hasNext()) {
 				JSONObject oj=(JSONObject) i.next();
@@ -54,13 +54,21 @@ public class ParserJSON {
 	    		String create_date=(String) oj.get("create_date");
 	    		String update_date=(String) oj.get("update_date");
 	    		boolean isDead= (boolean) Boolean.parseBoolean((String) oj.get("isDead"));
-	    		domains.add(d=new Domain(domain, create_date, update_date, country, isDead));
+	    		domains.add(new Domain(domain, create_date, update_date, country, isDead));
 			}
 		}catch(ParseException e) {
 			e.printStackTrace();
 		}
 			return domains;
 		
+	}
+	/**
+	 * Metodo che decodifica dati stringa in formato JSON e li inserisce in vettore
+	 * @param string viene passato una stringa formato JSON
+	 * @return ritorna un vettore di oggetti Domain
+	 */
+	public static Vector<Domain> parseTo(String string){
+		return parseTo(parse(string));
 	}
 		
 
