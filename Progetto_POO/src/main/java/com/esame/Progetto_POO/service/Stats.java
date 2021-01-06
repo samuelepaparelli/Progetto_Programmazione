@@ -92,10 +92,8 @@ public class Stats extends DomainService implements Statistics {
 	public Map<String, Integer> type() {
 		Map<String,Integer> tipologie = new HashMap<String, Integer>();
 		String tipo;
-		String[] temp;
 		for(Domain element:domains) {
-			temp = element.getDomain().split("\\.");
-			tipo=temp[1]; 
+			tipo = element.getType();
 			if(tipologie.containsKey(tipo)) {
 				tipologie.replace(tipo, 1+tipologie.get(tipo));
 			}else tipologie.put(tipo, 1);

@@ -40,6 +40,13 @@ public class Domain {
 		return this.domain;
 	}
 	/**
+	 * Metodo che ritorna il tipo ovvero TLD
+	 * @return il tipo ovvero TLD 
+	 */
+	public String getType() {
+		return this.domain.split("\\.")[1];
+	}
+	/**
 	 * Metodo che modifica la data di creazione
 	 * @param create_date
 	 */
@@ -94,6 +101,13 @@ public class Domain {
 	 */
 	public boolean getIsDead() {
 		return this.isDead;
+	}
+	/**
+	 * Metodo che ritorna il contrario di IsDead
+	 * @return il valore di Alive
+	 */
+	public boolean getAlive() {
+		return !this.isDead;
 	}
 	/**
 	 * Metodo toString dell'oggetto Domain in formato JSONObject

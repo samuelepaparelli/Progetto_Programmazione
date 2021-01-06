@@ -26,11 +26,11 @@ public class Filter extends DomainService implements Filtrable<Domain, Object> {
 	 * @return vettore di domini filtrato
 	 */
 	public Vector<Domain> filterByType(String tipologia){
-		if(!tipologia.substring(0,1).equals("."))tipologia="."+tipologia;
+		//if(!tipologia.substring(0,1).equals("."))tipologia="."+tipologia;
 		Vector<Domain> out = new Vector<Domain>();
 		for(Domain item:super.getDomains()){
 			try {
-			if(item.getDomain().contains(tipologia.toLowerCase()))out.add(item);
+			if(item.getType().equals(tipologia.toLowerCase()))out.add(item);
 			}catch(NullPointerException e) {
 				
 			}
