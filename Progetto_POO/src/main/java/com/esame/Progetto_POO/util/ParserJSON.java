@@ -26,11 +26,11 @@ public class ParserJSON {
  * @throws NoResultException 
  */
 	
-	public static JSONObject parse(String jsonString) throws NoResultException {
+	public static JSONObject parse(String jsonString) {
 		JSONObject jo=null;
 		try {
 			jo=(JSONObject) JSONValue.parseWithException(jsonString);
-			if(jo.containsKey("message")) throw new NoResultException("Can't find any domains");
+			
 		}catch(ParseException e) {
 			e.printStackTrace();
 		}
@@ -72,7 +72,7 @@ public class ParserJSON {
 	 * @return ritorna un vettore di oggetti Domain
 	 * @throws NoResultException 
 	 */
-	public static Vector<Domain> parseTo(String string) throws NoResultException{
+	public static Vector<Domain> parseTo(String string) {
 		return parseTo(parse(string));
 	}
 		
