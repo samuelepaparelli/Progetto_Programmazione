@@ -7,6 +7,8 @@ import org.json.simple.JSONObject;
 import org.json.simple.JSONValue;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
+
+import com.esame.Progetto_POO.exception.NoResultException;
 import com.esame.Progetto_POO.model.Domain;
 /**
  * Classe per il parsing dei file JSON
@@ -21,12 +23,14 @@ public class ParserJSON {
  * Metodo che fa il parsing di una stringa e restituisce un oggetto JSON
  * @param jsonString viene passata una stringa JSON
  * @return ritorna un JSON Object
+ * @throws NoResultException 
  */
 	
-	public static JSONObject parse(String jsonString) {
+	public static JSONObject parse(String jsonString) throws NoResultException {
 		JSONObject jo=null;
 		try {
 			jo=(JSONObject) JSONValue.parseWithException(jsonString);
+			if(jo.containsKey("message")) throw new NoResultException("Can't find any domains");
 		}catch(ParseException e) {
 			e.printStackTrace();
 		}
@@ -66,8 +70,9 @@ public class ParserJSON {
 	 * Metodo che decodifica dati stringa in formato JSON e li inserisce in vettore
 	 * @param string viene passato una stringa formato JSON
 	 * @return ritorna un vettore di oggetti Domain
+	 * @throws NoResultException 
 	 */
-	public static Vector<Domain> parseTo(String string){
+	public static Vector<Domain> parseTo(String string) throws NoResultException{
 		return parseTo(parse(string));
 	}
 		
