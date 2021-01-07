@@ -3,10 +3,11 @@ package com.esame.Progetto_POO.model;
 import java.util.Collection;
 
 /**
- * Classe usato per convertire una Stringa in oggetto JSON-Simple
- * @author ChenLei   SamuelePaparelli 
+ * Classe usata per convertire una stringa in un oggetto JSON-Simple
+ * @author ChenLei
+ * @author SamuelePaparelli 
  *
- * @param <T> tipo di oggetto che classe puo analizzare e convertire
+ * @param <T> tipo di oggetto che la classe può analizzare e convertire
  */
 public interface ParsebleTo<T> {
 	

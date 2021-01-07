@@ -3,7 +3,12 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.Collection;
 import java.util.Vector;
-
+/**
+ * 
+ * @author Samuele Paparelli
+ * @author Chen Lei
+ * @param <T>  tipo di oggetto che la classe può analizzare e convertire
+ */
 public class FilterUtils<T> {
 	
 	//AVAILABLE operators: eq(==) , and(&&) or(||) , not(!) 
@@ -35,7 +40,14 @@ public class FilterUtils<T> {
 		
 		return false;		
 	}
-	
+	/**
+	 * 
+	 * @param src
+	 * @param fieldName
+	 * @param operator
+	 * @param value
+	 * @return
+	 */
 	
 	
 	public Collection<T> select(Collection<T> src, String fieldName, String operator, Object value) {

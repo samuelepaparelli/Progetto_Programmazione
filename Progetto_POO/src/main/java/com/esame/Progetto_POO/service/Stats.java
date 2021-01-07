@@ -14,7 +14,10 @@ import com.esame.Progetto_POO.model.Domain;
 import com.esame.Progetto_POO.model.Statistics;
 /**
  * classe statistics per ottenere statistiche su un insieme di domini
- * @author ChenLei SamuelePaparelli
+ * @author ChenLei 
+ * @author SamuelePaparelli
+ * @see DomainService
+ * @see Statistics
  *
  */
 public class Stats extends DomainService implements Statistics {

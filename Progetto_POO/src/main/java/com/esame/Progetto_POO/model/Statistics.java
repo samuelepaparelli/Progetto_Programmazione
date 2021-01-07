@@ -2,7 +2,8 @@ package com.esame.Progetto_POO.model;
 
 /**
  * Interfaccia per ottenere statistiche su una collezione di domini
- * @author ChenLei SamuelePaparelli 
+ * @author ChenLei
+ * @author SamuelePaparelli 
  *
  */
 public interface Statistics {

@@ -9,7 +9,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLConnection;
 /**
- * 
+ * Classe per la lettura del JSON da file o da URL
  * @author Samuele Paparelli
  * @author Lei Chen
  */

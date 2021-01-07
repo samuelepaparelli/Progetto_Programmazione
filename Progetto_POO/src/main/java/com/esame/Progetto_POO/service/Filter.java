@@ -6,9 +6,11 @@ import com.esame.Progetto_POO.model.Domain;
 import com.esame.Progetto_POO.model.Filtrable;
 import com.esame.Progetto_POO.util.FilterUtils;
 /**
- * Classe figlia di DomainService, effettua il filtro su un dato vettore di domini.
- * @author ChenLei SamuelePaparelli
- *
+ * Classe che permette di filtrare un dato vettore di domini.
+ * @author ChenLei
+ * @author SamuelePaparelli
+ * @see DomainService
+ * @see Filtrable
  */
 public class Filter extends DomainService implements Filtrable<Domain, Object> {
 	public Filter(Vector<Domain> domains) {

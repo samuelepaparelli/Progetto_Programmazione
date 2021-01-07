@@ -6,7 +6,8 @@ import com.esame.Progetto_POO.model.Domain;
 
 /**
  * Classe astratta contenente elementi utili per servizi 
- * @author ChenLei SamuelePaparelli 
+ * @author ChenLei
+ * @author SamuelePaparelli 
  *
  */
 public abstract class DomainService {

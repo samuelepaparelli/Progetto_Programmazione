@@ -18,27 +18,27 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * controller che fornisce tutte le rotte del REST API
+ * Classe Controller che fornisce le rotte del REST API
  * 
- * @author ChenLei SamuelePaparelli
- *
+ * @author Chen Lei 
+ *@author Samuele Paparelli
  */
 @RestController
 public class Controller {
 
 	/**
-	 * un pezzo di URL per accedere all'API
+	 * Parte dell'URL per accedere all'API
 	 */
 	private static final String searchURL = "https://api.domainsdb.info/v1/domains/search?domain=";
 
 	/**
-	 * nome del file salvato nel PC
+	 * Nome del file salvato in locale
 	 */
 	private static final String fileName = "api.txt";
 
 	/**
-	 * Rotta per visualizzare statistiche su una collezione di domini(fornito
-	 * dall'API di domainsdb.info) che soddisfano il parametro
+	 * Rotta per la visualizzazione delle statistiche su una collezione di domini(fornita
+	 * dall'API di domainsdb.info) che soddisfano il parametro passato
 	 * 
 	 * @param cognome o la parola che e' contenuta nel nome del dominio
 	 * @return stringa delle statistiche dei siti in standard JSON
@@ -51,8 +51,8 @@ public class Controller {
 	}
 
 	/**
-	 * Rotta per visualizzare collezione di domini(fornito dall'API di
-	 * domainsdb.info) filtrati in base ai parametri
+	 * Rotta per la visualizzazione della collezione di domini(fornito dall'API di
+	 * domainsdb.info) filtrati in base ai parametri passati
 	 * 
 	 * @param cognome o la parola che e' contenuta nel nome del dominio
 	 * @param type    , filtro per il TLD del dominio
@@ -76,7 +76,7 @@ public class Controller {
 	}
 
 	/**
-	 * Rotta per visuallizare collezione di domini(fornito dall'API di
+	 * Rotta per la visualizzazione della collezione di domini(fornito dall'API di
 	 * domainsdb.info) contenente la parola(cognome)
 	 * 
 	 * @param cognome o la parola che e' contenuta nel nome del dominio
@@ -90,10 +90,10 @@ public class Controller {
 	}
 
 	/**
-	 * Rotta per visualizzare statistiche su una collezione di domini salvati nel
-	 * computer
+	 * Rotta per la visualizzazione delle statistiche su una collezione di domini salvati in
+	 * locale
 	 * 
-	 * @return stringa delle statistiche dei siti in standard JSON
+	 * @return stringa contenente le statistiche dei siti in standard JSON
 	 */
 	@GetMapping("/localstats")
 	public String getStatsOfFileLocale() {
@@ -142,7 +142,7 @@ public class Controller {
 	}
 
 	/**
-	 * metodo per interfacciare i attributi del JSONObject con i parametri del
+	 * Metodo per interfacciare gli attributi del JSONObject con i parametri del
 	 * filtro multiplo
 	 * 
 	 * @param key   l'attributo del JSONObject

@@ -3,8 +3,9 @@ package com.esame.Progetto_POO.model;
 import java.util.Collection;
 
 /**
- * Interfaccia per avere un filtro multiplo
- * @author ChenLei SamuelePaparelli 
+ * Interfaccia per l'implementazione del filtro multiplo
+ * @author ChenLei
+ * @author SamuelePaparelli 
  *
  */
 public interface Filtrable<E,T> {

@@ -1,7 +1,8 @@
 package com.esame.Progetto_POO.model;
 /**
- * Modello che descrive i metadati di un dominio.
- * @author Samuele Paparelli Chen Lei
+ * Classe per la modellazione dei metadati di un dominio.
+ * @author Samuele Paparelli
+ * @author Chen Lei
  *
  */
 public class Domain {

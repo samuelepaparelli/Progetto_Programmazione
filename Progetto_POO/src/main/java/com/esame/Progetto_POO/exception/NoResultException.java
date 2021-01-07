@@ -1,8 +1,9 @@
 package com.esame.Progetto_POO.exception;
 /**
- * Classe eccezione quando non trovo l'oggetto interessato
- * @author ChenLei SamuelePaparelli
- *
+ * Classe per gestire l'eccezione nel caso in cui l'oggetto richiesto non è esistente
+ * @author Chen Lei 
+ * @author Samuele Paparelli
+ * @see Ecxeption
  */
 public class NoResultException extends Exception {
 

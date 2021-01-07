@@ -23,7 +23,7 @@ public class ParserJSON {
  * Metodo che fa il parsing di una stringa e restituisce un oggetto JSON
  * @param jsonString viene passata una stringa JSON
  * @return ritorna un JSON Object
- * @throws NoResultException 
+ *  
  */
 	
 	public static JSONObject parse(String jsonString) {
@@ -70,7 +70,7 @@ public class ParserJSON {
 	 * Metodo che decodifica dati stringa in formato JSON e li inserisce in vettore
 	 * @param string viene passato una stringa formato JSON
 	 * @return ritorna un vettore di oggetti Domain
-	 * @throws NoResultException 
+	 *  
 	 */
 	public static Vector<Domain> parseTo(String string) {
 		return parseTo(parse(string));
