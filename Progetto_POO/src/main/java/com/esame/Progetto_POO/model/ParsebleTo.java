@@ -16,5 +16,5 @@ public interface ParsebleTo<T> {
 	 * @param source Stringa in formato JSON
 	 * @return collezione di oggetti di tipo T 
 	 */
-	public abstract Collection<T> filterField(String source);
+	public abstract Collection<T> parseTo(String source);
 }

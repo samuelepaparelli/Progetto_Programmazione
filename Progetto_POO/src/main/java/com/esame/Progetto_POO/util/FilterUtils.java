@@ -79,9 +79,4 @@ public class FilterUtils<T> {
 		}
 		return out;
 	}
-	
-	public static boolean isArrayOfString(Object o){ 
-		return o.getClass().toString().contains("[Ljava.lang.String");
-			
-		}  
 }

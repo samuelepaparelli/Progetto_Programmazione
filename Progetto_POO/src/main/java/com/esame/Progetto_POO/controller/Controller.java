@@ -1,5 +1,6 @@
 package com.esame.Progetto_POO.controller;
 
+import com.esame.Progetto_POO.exception.NoResultException;
 import com.esame.Progetto_POO.model.Domain;
 import com.esame.Progetto_POO.service.Filter;
 import com.esame.Progetto_POO.service.Stats;
@@ -20,8 +21,8 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * Classe Controller che fornisce le rotte del REST API
  * 
- * @author Chen Lei 
- *@author Samuele Paparelli
+ * @author Chen Lei
+ * @author Samuele Paparelli
  */
 @RestController
 public class Controller {
@@ -37,8 +38,9 @@ public class Controller {
 	private static final String fileName = "api.txt";
 
 	/**
-	 * Rotta per la visualizzazione delle statistiche su una collezione di domini(fornita
-	 * dall'API di domainsdb.info) che soddisfano il parametro passato
+	 * Rotta per la visualizzazione delle statistiche su una collezione di
+	 * domini(fornita dall'API di domainsdb.info) che soddisfano il parametro
+	 * passato
 	 * 
 	 * @param cognome o la parola che e' contenuta nel nome del dominio
 	 * @return stringa delle statistiche dei siti in standard JSON
@@ -46,7 +48,14 @@ public class Controller {
 	@GetMapping("/{cognome}/stats")
 	public String getDomainGiveStats(@PathVariable("cognome") String cognome) {
 
-		Stats stats = new Stats(ParserJSON.parseTo(ReaderJSON.readFromURL(searchURL + cognome)));
+		Stats stats;
+		try {
+			stats = new Stats(ParserJSON.parseTo(ReaderJSON.readFromURL(searchURL + cognome)));
+		} catch (NoResultException e) {
+			e.printStackTrace();
+			return "{\"error\":\"can't find any domains for " + cognome + "\"}";
+
+		}
 		return stats.viewStats();
 	}
 
@@ -67,7 +76,14 @@ public class Controller {
 			@RequestParam(name = "nation", defaultValue = "") String nation,
 			@RequestParam(name = "alive", defaultValue = "undefined") String alive) {
 
-		Filter filter = new Filter(ParserJSON.parseTo(ReaderJSON.readFromURL(searchURL + cognome)));
+		Filter filter;
+		try {
+			filter = new Filter(ParserJSON.parseTo(ReaderJSON.readFromURL(searchURL + cognome)));
+		} catch (NoResultException e) {
+			e.printStackTrace();
+			return "{\"error\":\"can't find any domains for " + cognome + "\"}";
+
+		}
 		filter = new Filter(filter.filterByType(type));
 		filter = new Filter(filter.filterByNations(nation));
 		if (!alive.equals("undefined"))
@@ -85,20 +101,34 @@ public class Controller {
 	@GetMapping("/{cognome}")
 	public String getDomain(@PathVariable("cognome") String cognome) {
 
-		Vector<Domain> domains = ParserJSON.parseTo(ReaderJSON.readFromURL(searchURL + cognome));
+		Vector<Domain> domains;
+		try {
+			domains = ParserJSON.parseTo(ReaderJSON.readFromURL(searchURL + cognome));
+		} catch (NoResultException e) {
+			e.printStackTrace();
+			return "{\"error\":\"can't find any domains for " + cognome + "\"}";
+
+		}
 		return domains.toString();
 	}
 
 	/**
-	 * Rotta per la visualizzazione delle statistiche su una collezione di domini salvati in
-	 * locale
+	 * Rotta per la visualizzazione delle statistiche su una collezione di domini
+	 * salvati in locale
 	 * 
 	 * @return stringa contenente le statistiche dei siti in standard JSON
 	 */
 	@GetMapping("/localstats")
 	public String getStatsOfFileLocale() {
 
-		Stats stats = new Stats(ParserJSON.parseTo(ReaderJSON.readFromFile(fileName)));
+		Stats stats;
+		try {
+			stats = new Stats(ParserJSON.parseTo(ReaderJSON.readFromFile(fileName)));
+		} catch (NoResultException e) {
+			e.printStackTrace();
+			return "{\"error\":\"can't find any domains for file " + fileName + "\"}";
+
+		}
 		return stats.viewStats();
 	}
 
@@ -113,11 +143,17 @@ public class Controller {
 	 *         filtrati
 	 */
 	@PostMapping(path = "/{cognome}/filter")
-	public String MultipleFilterWithPOST(@PathVariable("cognome ") String cognome, @RequestBody String body) {
-
-		Filter filter = new Filter(ParserJSON.parseTo(ReaderJSON.readFromURL(searchURL + cognome)));
+	public String MultipleFilterWithPOST(@PathVariable("cognome") String cognome, @RequestBody String body) {
 		Vector<Domain> domainsOK = new Vector<Domain>();
-		JSONObject bodyjson = ParserJSON.parse(body);
+		JSONObject bodyjson;
+		Filter filter;
+		try {
+			filter = new Filter(ParserJSON.parseTo(ReaderJSON.readFromURL(searchURL + cognome)));
+			bodyjson = ParserJSON.parse(body);
+		} catch (NoResultException e) {
+			e.printStackTrace();
+			return "{\"error\":\"can't find any domains for " + cognome + "\"}";
+		}
 		if ("or".equals(bodyjson.get("logica"))) {
 			bodyjson.remove("logica");
 			Set<String> keys = bodyjson.keySet();

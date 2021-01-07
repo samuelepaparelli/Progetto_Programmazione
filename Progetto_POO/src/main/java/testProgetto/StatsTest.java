@@ -1,5 +1,6 @@
 package testProgetto;
 
+import com.esame.Progetto_POO.exception.NoResultException;
 import com.esame.Progetto_POO.model.Domain;
 import com.esame.Progetto_POO.service.Stats;
 import com.esame.Progetto_POO.util.ParserJSON;
@@ -51,7 +52,13 @@ public class StatsTest extends TestCase {
 	//(@RequestParam(name = "name", defaultValue = "World") String nome)
 	public  String Method1(String cognome) {
 		System.out.println(searchURL+cognome);
-		Stats stats= new Stats(ParserJSON.parseTo(ReaderJSON.readFromURL(searchURL+cognome)));
+		Stats stats;
+		try{
+			stats= new Stats(ParserJSON.parseTo(ReaderJSON.readFromURL(searchURL+cognome)));
+		}catch(NoResultException e) {
+			e.printStackTrace();
+			return "NO DOMAIN";
+		}
 		return stats.viewStats();
 	}
 	
