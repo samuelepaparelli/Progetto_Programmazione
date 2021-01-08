@@ -12,7 +12,13 @@ import java.util.Vector;
 public class FilterUtils<T> {
 	
 	//AVAILABLE operators: eq(==) , and(&&) or(||) , not(!) 
-	
+	/**
+	 * 
+	 * @param budget
+	 * @param operator
+	 * @param request
+	 * @return
+	 */
 	public static boolean check(Object budget, String operator, Object request) {
 		if (request instanceof String[] && budget instanceof String) {	
 			if(operator.equals("and")) {
