@@ -96,7 +96,13 @@
     </packagedElement>
   </packagedElement>
   <packagedElement xmi:type="uml:Package" xmi:id="_TsaSAD4PEeu1APL5aqTE7A" name="exception">
-    <packagedElement xmi:type="uml:Class" xmi:id="_sZXdcD7fEeu_YsLnCk4Z6A" name="NoResultException" visibility="public"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_sZXdcD7fEeu_YsLnCk4Z6A" name="NoResultException" visibility="public">
+      <ownedOperation xmi:id="_5qM-cFHEEeuoKfX_aUzZhA" name="NoResultException">
+        <ownedParameter xmi:id="_-jawIFHEEeuoKfX_aUzZhA" name="msg">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_fDyp0D7nEeu_YsLnCk4Z6A" name=" " memberEnd="_fDyp0T7nEeu_YsLnCk4Z6A _fDyp1D7nEeu_YsLnCk4Z6A" navigableOwnedEnd="_fDyp0T7nEeu_YsLnCk4Z6A _fDyp1D7nEeu_YsLnCk4Z6A">
       <ownedEnd xmi:id="_fDyp0T7nEeu_YsLnCk4Z6A" name="" type="_sZXdcD7fEeu_YsLnCk4Z6A" association="_fDyp0D7nEeu_YsLnCk4Z6A">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_fDyp0j7nEeu_YsLnCk4Z6A"/>
@@ -111,4 +117,56 @@
   <packagedElement xmi:type="uml:Package" xmi:id="_D3omID4ZEeu1APL5aqTE7A" name="controller">
     <packagedElement xmi:type="uml:Class" xmi:id="_FmbqQD4ZEeu1APL5aqTE7A" name="Controller" visibility="public"/>
   </packagedElement>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_FtlbUFHGEeuoKfX_aUzZhA" name="Client">
+    <eAnnotations xmi:id="_FtmpcFHGEeuoKfX_aUzZhA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details xmi:id="_FtmpcVHGEeuoKfX_aUzZhA" key="Human"/>
+    </eAnnotations>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_GpiGMFHGEeuoKfX_aUzZhA" name="Domains list"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_HDeQMFHGEeuoKfX_aUzZhA" name="Domains stats">
+    <include xmi:id="_GvwLgFHdEeuoKfX_aUzZhA" addition="_M41xAFHaEeuoKfX_aUzZhA"/>
+    <include xmi:id="_HWliAFHdEeuoKfX_aUzZhA" addition="_Mm5scFHaEeuoKfX_aUzZhA"/>
+    <include xmi:id="_H1Fb4FHdEeuoKfX_aUzZhA" addition="_HGvaEFHbEeuoKfX_aUzZhA"/>
+    <include xmi:id="_ITw78FHdEeuoKfX_aUzZhA" addition="_NHaYgFHaEeuoKfX_aUzZhA"/>
+    <include xmi:id="_ItfqkFHdEeuoKfX_aUzZhA" addition="_loQboFHbEeuoKfX_aUzZhA"/>
+    <include xmi:id="_JFf64FHdEeuoKfX_aUzZhA" addition="_vIlF4FHcEeuoKfX_aUzZhA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_HaPxcFHGEeuoKfX_aUzZhA" name="Domains filtered">
+    <include xmi:id="__Qk0QFHIEeuoKfX_aUzZhA" addition="_TE698FHIEeuoKfX_aUzZhA"/>
+    <include xmi:id="_B_l_QFHJEeuoKfX_aUzZhA" addition="_Ty1z4FHIEeuoKfX_aUzZhA"/>
+    <include xmi:id="_CcdhcFHJEeuoKfX_aUzZhA" addition="_UJMeYFHIEeuoKfX_aUzZhA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_HypDUFHGEeuoKfX_aUzZhA" name="Local domains list"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_U97Y4FHGEeuoKfX_aUzZhA" name="Domains filtered by multiple filter">
+    <extend xmi:id="_aMUecFHIEeuoKfX_aUzZhA" extendedCase="_HaPxcFHGEeuoKfX_aUzZhA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_Z9CXMFHGEeuoKfX_aUzZhA" memberEnd="_Z9C-QFHGEeuoKfX_aUzZhA _Z9C-QVHGEeuoKfX_aUzZhA">
+    <ownedEnd xmi:id="_Z9C-QFHGEeuoKfX_aUzZhA" type="_FtlbUFHGEeuoKfX_aUzZhA" association="_Z9CXMFHGEeuoKfX_aUzZhA"/>
+    <ownedEnd xmi:id="_Z9C-QVHGEeuoKfX_aUzZhA" type="_GpiGMFHGEeuoKfX_aUzZhA" association="_Z9CXMFHGEeuoKfX_aUzZhA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_anJrMFHGEeuoKfX_aUzZhA" name="A_client_domains stats" memberEnd="_anKSQFHGEeuoKfX_aUzZhA _anKSQVHGEeuoKfX_aUzZhA">
+    <ownedEnd xmi:id="_anKSQFHGEeuoKfX_aUzZhA" type="_FtlbUFHGEeuoKfX_aUzZhA" association="_anJrMFHGEeuoKfX_aUzZhA"/>
+    <ownedEnd xmi:id="_anKSQVHGEeuoKfX_aUzZhA" type="_HDeQMFHGEeuoKfX_aUzZhA" association="_anJrMFHGEeuoKfX_aUzZhA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_bDqoEFHGEeuoKfX_aUzZhA" memberEnd="_bDqoEVHGEeuoKfX_aUzZhA _bDqoElHGEeuoKfX_aUzZhA">
+    <ownedEnd xmi:id="_bDqoEVHGEeuoKfX_aUzZhA" type="_FtlbUFHGEeuoKfX_aUzZhA" association="_bDqoEFHGEeuoKfX_aUzZhA"/>
+    <ownedEnd xmi:id="_bDqoElHGEeuoKfX_aUzZhA" type="_HaPxcFHGEeuoKfX_aUzZhA" association="_bDqoEFHGEeuoKfX_aUzZhA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_bg7y4FHGEeuoKfX_aUzZhA" memberEnd="_bg7y4VHGEeuoKfX_aUzZhA _bg7y4lHGEeuoKfX_aUzZhA">
+    <ownedEnd xmi:id="_bg7y4VHGEeuoKfX_aUzZhA" type="_FtlbUFHGEeuoKfX_aUzZhA" association="_bg7y4FHGEeuoKfX_aUzZhA"/>
+    <ownedEnd xmi:id="_bg7y4lHGEeuoKfX_aUzZhA" type="_HypDUFHGEeuoKfX_aUzZhA" association="_bg7y4FHGEeuoKfX_aUzZhA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_b-vJMFHGEeuoKfX_aUzZhA" memberEnd="_b-vJMVHGEeuoKfX_aUzZhA _b-vJMlHGEeuoKfX_aUzZhA">
+    <ownedEnd xmi:id="_b-vJMVHGEeuoKfX_aUzZhA" type="_FtlbUFHGEeuoKfX_aUzZhA" association="_b-vJMFHGEeuoKfX_aUzZhA"/>
+    <ownedEnd xmi:id="_b-vJMlHGEeuoKfX_aUzZhA" type="_U97Y4FHGEeuoKfX_aUzZhA" association="_b-vJMFHGEeuoKfX_aUzZhA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_TE698FHIEeuoKfX_aUzZhA" name="Country filter"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_Ty1z4FHIEeuoKfX_aUzZhA" name="type filter"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_UJMeYFHIEeuoKfX_aUzZhA" name="dead/not dead filter"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_Mm5scFHaEeuoKfX_aUzZhA" name="quantity of domains dead"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_M41xAFHaEeuoKfX_aUzZhA" name="quantity of domains analyzed"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_NHaYgFHaEeuoKfX_aUzZhA" name="quantity of domains for hosting nation"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_HGvaEFHbEeuoKfX_aUzZhA" name="Average update time"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_loQboFHbEeuoKfX_aUzZhA" name="quantity of domains for TLD"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_vIlF4FHcEeuoKfX_aUzZhA" name="period of deactivation or activation"/>
 </uml:Model>

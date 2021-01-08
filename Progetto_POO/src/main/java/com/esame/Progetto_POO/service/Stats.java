@@ -26,20 +26,23 @@ public class Stats extends DomainService implements Statistics {
 	 * modello per il formato data
 	 */
 	private static final DateTimeFormatter pattern = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSSSSS");
-
+    /**
+     * Costruttore della classe Stats
+     * @param domains vettore di domini
+     */
 	public Stats(Vector<Domain> domains) {
 		super(domains);
 		// TODO Auto-generated constructor stub
 	}
 	/**
-	 * metodo per ottenere la quantita di domini analizzati
+	 * Metodo per ottenere la quantità di domini analizzati
 	 * @return quantita in intero
 	 */
 	public int quantity() {
 		return this.domains.size();
 	}
 	/**
-	 * metodo per ottenere quantita di domini ancora vivi
+	 * Metodo per ottenere quantità di domini ancora attivi
 	 * @return quantita di domini vivi in intero
 	 */
 	public int quantityOfAlive() {
@@ -51,7 +54,7 @@ public class Stats extends DomainService implements Statistics {
 		return count;
 	}
 	/**
-	 * metodo per ottenere il tempo medio di update tra elementi del vettore
+	 * Metodo per ottenere il tempo medio di update tra elementi del vettore
 	 * @return tempo medio di update in stringa; esempio:5Y10D , con Y=Years e D=Days
 	 */
 	public String averageUpdateTime() {
@@ -74,8 +77,8 @@ public class Stats extends DomainService implements Statistics {
 		}else return null;
 	}
 	/**
-	 * metodo per ottenere un elenco sul numero di domini per ciascuna nazione presente nel vettore
-	 * @return HashMap di tipo <String,Integer>, con Key l'abbreviazione della nazione e value la quantita.
+	 * Metodo per ottenere un elenco sul numero di domini per ciascuna nazione presente nel vettore
+	 * @return HashMap di tipo "String,Integer", con Key l'abbreviazione della nazione e value la quantità.
 	 */
 	public Map<String, Integer> hostingNations() {
 		Map<String,Integer> nazioni = new HashMap<String, Integer>();
@@ -89,8 +92,8 @@ public class Stats extends DomainService implements Statistics {
 		return nazioni;
 	}
 	/**
-	 * metodo per ottenere un elenco sul numero di domini per ogni TOP_LEVEL_DOMAIN presente nel vettore
-	 * @return HashMap di tipo <String,Integer>, con Key il TLD e value la quantita.
+	 * Metodo per ottenere un elenco sul numero di domini per ogni TOP_LEVEL_DOMAIN presente nel vettore
+	 * @return HashMap di tipo "String,Integer", con Key il TLD e value la quantità.
 	 */
 	public Map<String, Integer> type() {
 		Map<String,Integer> tipologie = new HashMap<String, Integer>();
@@ -104,8 +107,8 @@ public class Stats extends DomainService implements Statistics {
 		return tipologie;
 	}
 	/**
-	 * metodo per ottenere un elenco sul numero di domini per ogni mese presente nel vettore
-	 * @return HashMap di tipo <String,Integer>, con Key anno-mese e value la quantita.
+	 * Metodo per ottenere un elenco sul numero di domini per ogni mese presente nel vettore
+	 * @return HashMap di tipo "String,Integer", con Key anno-mese e value la quantità.
 	 */
 	public Map<String, Integer> createdDate() {
 		Map<String,Integer> elencoPerMesi = new HashMap<String, Integer>();
