@@ -114,8 +114,8 @@ public class Domain {
 	 * Metodo toString dell'oggetto Domain in formato JSONObject
 	 */
 	public String toString() {
-		return "{\"domain\":\""+getDomain()+",\"createDate\":\""+getCreateDate()+
-				",\"updateDate\":\""+getUpdateDate()+",\"country\":\""+getCountry()+",\"isDead\":\""+getIsDead()+"\"}";   
+		return "{\"domain\":\""+getDomain()+"\",\"createDate\":\""+getCreateDate()+
+				"\",\"updateDate\":\""+getUpdateDate()+"\",\"country\":\""+getCountry()+"\",\"isDead\":\""+getIsDead()+"\"}";   
 	}
 	/**
 	 * Metodo equals della classe Domain

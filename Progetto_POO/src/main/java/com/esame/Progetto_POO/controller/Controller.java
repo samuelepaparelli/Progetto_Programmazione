@@ -73,7 +73,7 @@ public class Controller {
 	@GetMapping("/{cognome}/filter")
 	public String getDomainAndFilter(@PathVariable("cognome") String cognome,
 			@RequestParam(name = "type", defaultValue = "") String type,
-			@RequestParam(name = "nation", defaultValue = "") String nation,
+			@RequestParam(name = "nation", defaultValue = "undefined") String nation,
 			@RequestParam(name = "alive", defaultValue = "undefined") String alive) {
 
 		Filter filter;
@@ -85,7 +85,8 @@ public class Controller {
 
 		}
 		filter = new Filter(filter.filterByType(type));
-		filter = new Filter(filter.filterByNations(nation));
+		if (!nation.equals("undefined"))
+			filter = new Filter(filter.filterByNations(nation));
 		if (!alive.equals("undefined"))
 			filter = new Filter(filter.filterByAlive(Boolean.parseBoolean(alive)));
 		return filter.getDomains().toString();
@@ -154,7 +155,7 @@ public class Controller {
 			e.printStackTrace();
 			return "{\"error\":\"can't find any domains for " + cognome + "\"}";
 		}
-		if ("or".equals(bodyjson.get("logica"))) {
+		if ( "or".equals(bodyjson.get("logica"))) {
 			bodyjson.remove("logica");
 			Set<String> keys = bodyjson.keySet();
 			for (String key : keys) {
@@ -169,10 +170,11 @@ public class Controller {
 			Set<String> keys = bodyjson.keySet();
 			for (String key : keys) {
 				Object[] param = POSTBodyToParams(key, (JSONObject) bodyjson.get(key));
-				domainsOK = filter.MultipleFilter((String) param[0], (String) param[1], param[2]);
+				domainsOK =  filter.MultipleFilter((String) param[0], (String) param[1], param[2]);
 				filter = new Filter(domainsOK);
 			}
 		}
+		 
 		return domainsOK.toString();
 
 	}

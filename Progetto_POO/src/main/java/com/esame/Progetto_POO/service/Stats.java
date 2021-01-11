@@ -128,8 +128,8 @@ public class Stats extends DomainService implements Statistics {
 	public String viewStats() {
 		return "{\"quantity\":"+quantity()+
 				",\"quantityOfAlive\":"+quantityOfAlive()+
-				",\"averageUpdateTime\":"+averageUpdateTime()+
-				",\"hostingNations\":"+(new JSONObject(hostingNations()))+
+				",\"averageUpdateTime\":\""+averageUpdateTime()+
+				"\",\"hostingNations\":"+(new JSONObject(hostingNations()))+
 				",\"type\":"+(new JSONObject(type()))+
 				",\"createdDate\":"+(new JSONObject(createdDate()))+"}";
 	}

@@ -32,7 +32,7 @@ public class Filter extends DomainService implements Filtrable<Domain, Object> {
 		Vector<Domain> out = new Vector<Domain>();
 		for(Domain item:super.getDomains()){
 			try {
-			if(item.getType().equals(tipologia.toLowerCase()))out.add(item);
+			if(item.getType().contains(tipologia.toLowerCase()))out.add(item);
 			}catch(NullPointerException e) {
 				
 			}
