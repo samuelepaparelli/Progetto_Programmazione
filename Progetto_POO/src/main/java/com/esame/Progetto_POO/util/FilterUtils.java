@@ -38,9 +38,11 @@ public class FilterUtils<T> {
 			if(operator.equals("eq"))return ((String)budget).contains((String)request);
 			if(operator.equals("not"))return !((String)budget).contains((String)request);
 			return false;
-		}else if(request instanceof String && budget instanceof Boolean) {
-			boolean boolrequest= (boolean) Boolean.parseBoolean((String)request);
-			if(operator.equals("eq"))return ((Boolean)budget^!boolrequest);
+		}else if((request instanceof String||request instanceof Boolean) && budget instanceof Boolean) {
+			boolean boolrequest = false;
+			if(request instanceof String ) boolrequest= (boolean) Boolean.parseBoolean((String)request);
+			if(request instanceof Boolean) boolrequest=(boolean)request;
+ 			if(operator.equals("eq"))return ((Boolean)budget^!boolrequest);
 			if(operator.equals("not"))return ((Boolean)budget^boolrequest);
 			return false;
 		}
