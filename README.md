@@ -6,7 +6,7 @@ GET /{cognome}/stats
 
 GET /{cognome}/filter?type=com&nation=it&alive=true
 
-GET /local
+GET /localstats
 
 POST /{cognome}/filter  // Filtro multiplo
 {
