@@ -36,7 +36,11 @@ La chiamta **POST/{cognome}/filter** a differenza di quella di tipo **GET** dà 
   
 }
 
-## Diagrammi package e classi UML:
+## Diagrammi UML:
+
+### Diagramma dei casi d'uso
+
+<img src="UML_img/UseCaseDiagram.png" width="600">
 
 ### Diagramma del package controller
  
