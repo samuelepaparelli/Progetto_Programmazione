@@ -3,7 +3,7 @@
 
 L'obbiettivo del progetto è stato quello di creare una REST API che implementasse l'API DOMAINS DB.
 
-DOMANIS DB permette l'accesso ad un lista di siti con le loro seguenti caratteristiche:
+DOMAINS DB permette l'accesso ad un lista di siti con le loro seguenti caratteristiche:
 - Dominio
 - Data di creazione
 - Data di aggiornamento
