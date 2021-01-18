@@ -3,7 +3,7 @@
 
 L'obbiettivo del progetto è stato quello di creare una REST API che implementasse l'API DOMAINS DB.
 
-DOMANIS DB permette l'accesso ad un lista di siti con le loro seguenti caratteristiche:
+DOMAINS DB permette l'accesso ad un lista di siti con le loro seguenti caratteristiche:
 - Dominio
 - Data di creazione
 - Data di aggiornamento
@@ -36,7 +36,11 @@ La chiamta **POST/{cognome}/filter** a differenza di quella di tipo **GET** dà 
   
 }
 
-## Diagrammi package e classi UML:
+## Diagrammi UML:
+
+### Diagramma dei casi d'uso
+
+<img src="UML_img/UseCaseDiagram.png" width="600">
 
 ### Diagramma del package controller
  
