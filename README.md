@@ -3,6 +3,8 @@
 
 L'obbiettivo del progetto è stato quello di creare una REST API che implementasse l'API DOMAINS DB.
 
+**Api reference:** https://api.domainsdb.info/v1/
+
 DOMAINS DB permette l'accesso ad un lista di siti con le loro seguenti caratteristiche:
 - Dominio
 - Data di creazione
