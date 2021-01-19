@@ -25,9 +25,12 @@ GET                    | /localstats            | Statistiche dei domini dal fil
 POST                   | /{cognome}/filter      | Lista filtrata dei domini con la possibilità di concatenare più filtri 
 
 **!** Sostituire {cognome} con un cognome
+
 La chiamata **GET /{cognome}/filter** da la possibilita di un filtraggio semplice, i parametri sono opzionali e possono essere:
 type(ovvero il TLD es. com org net) nation(la nazione di hosting es. IT FR UK) e alive( true(attivo) o false(disattivo) ).
+
 La chiamata **GET /localstats** utilizza il file "api.txt" dentro il progetto.
+
 La chiamata **POST /{cognome}/filter** a differenza di quella di tipo **GET** dà la possibilità di concatenare più filtri.
 
 ## CONFIGURAZIONE:
