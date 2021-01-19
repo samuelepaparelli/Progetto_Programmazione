@@ -12,7 +12,7 @@ import com.esame.Progetto_POO.model.Domain;
  */
 public abstract class DomainService {
 	/**
-	 * vettore di Domini che verrà usato dai servizi 
+	 * Vettore di domini che verrà usato dai servizi 
 	 */
 	protected Vector<Domain> domains;
 	/**

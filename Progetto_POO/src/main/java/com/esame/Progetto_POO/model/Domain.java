@@ -28,7 +28,7 @@ public class Domain {
 	}
 	/**
 	 * Metodo che modifica il dominio
-	 * @param domain
+	 * @param domain parametro contenente la stringa del dominio
 	 */
 	public void setDomain(String domain) {
 		this.domain=domain;
@@ -49,7 +49,7 @@ public class Domain {
 	}
 	/**
 	 * Metodo che modifica la data di creazione
-	 * @param create_date
+	 * @param create_date parametro contenente la stringa della data di creazione del dominio
 	 */
 	public void setCreateDate(String create_date) {
 		this.create_date=create_date;
@@ -63,7 +63,7 @@ public class Domain {
 	}
 	/**
 	 * Metodo che modifica la data di aggiornamento
-	 * @param update_date
+	 * @param update_date parametro contenente la stringa della data di aggiornamento del dominio
 	 */
 	public void setUpdateDate(String update_date) {
 		this.update_date=update_date;
@@ -77,7 +77,7 @@ public class Domain {
 	}
 	/**
 	 * Metodo che modifica la nazione di hosting
-	 * @param country
+	 * @param country  parametro contenente la stringa della nazione di hosting
 	 */
 	public void setCountry(String country) {
 		this.country=country;
@@ -91,7 +91,7 @@ public class Domain {
 	}
 	/**
 	 * Metodo che modifica il valore di isDead
-	 * @param isDead
+	 * @param isDead parametro contenente la stringa che restituisce true se il sito è inattivo e false se è attivo 
 	 */
 	public void setIsDead(boolean isDead) {
 		this.isDead=isDead;

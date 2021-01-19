@@ -17,12 +17,12 @@ public class FilterUtils<T> {
 
 	// AVAILABLE operators: eq(==) , and(&&) or(||) , not(!)
 	/**
-	 * metodo per effettuare il controllo, se l'attributo dell'oggetto rispetta le
+	 * Metodo per effettuare il controllo, se l'attributo dell'oggetto rispetta le
 	 * condizioni richieste
 	 * 
 	 * @param budget   valore candidato
 	 * @param operator comparatore, condizione di filtro; AVAILABLE operators:
-	 *                 eq(==) , and(&&) or(||) , not(!)
+	 *                 "eq" , "and", "or" , "not"
 	 * @param request  valore richiesto dall'utente
 	 * @return true se il valore candidato e' qualificato , altrimenti false
 	 */
@@ -67,9 +67,9 @@ public class FilterUtils<T> {
 	}
 
 	/**
-	 * metodo che prende una collezione di oggetti e restituisce la parte filtrata.
+	 * Metodo che prende una collezione di oggetti e restituisce la parte filtrata.
 	 * 
-	 * @param src       sorgente, una collezione di oggetti di tipo <T>
+	 * @param src       sorgente, una collezione di oggetti di tipo "T"
 	 * @param fieldName nome dell'attributo che contiene il valore
 	 * @param operator  comparatore
 	 * @param value     valore richiesto

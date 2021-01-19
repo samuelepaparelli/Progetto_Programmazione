@@ -1,9 +1,9 @@
 package com.esame.Progetto_POO.exception;
 /**
- * Classe per gestire l'eccezione nel caso in cui l'oggetto richiesto non è esistente
+ * Classe per gestire l'eccezione nel caso in cui non esista nessun dominio con il cognome inserito
  * @author Chen Lei 
  * @author Samuele Paparelli
- * @see Ecxeption
+ * @see Exception
  */
 public class NoResultException extends Exception {
 
