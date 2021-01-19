@@ -26,7 +26,7 @@ POST                   | /{cognome}/filter      | Lista filtrata dei domini con 
 
 **!** Sostituire {cognome} con un cognome
 
-La chiamata **GET /{cognome}/filter** da la possibilita di un filtraggio semplice, i parametri sono opzionali e possono essere:
+La chiamata **GET /{cognome}/filter** dà la possibilità di un filtraggio dei siti semplice, i parametri sono opzionali e possono essere:
 
 **type**(ovvero il TLD es. com org net) **nation**(la nazione di hosting es. IT FR UK) e **alive**( true(attivo) o false(disattivo) ).
 
