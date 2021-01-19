@@ -27,6 +27,7 @@ POST                   | /{cognome}/filter      | Lista filtrata dei domini con 
 **!** Sostituire {cognome} con un cognome
 
 La chiamata **GET /{cognome}/filter** da la possibilita di un filtraggio semplice, i parametri sono opzionali e possono essere:
+
 **type**(ovvero il TLD es. com org net) **nation**(la nazione di hosting es. IT FR UK) e **alive**( true(attivo) o false(disattivo) ).
 
 La chiamata **GET /localstats** utilizza il file "api.txt" dentro il progetto.
@@ -105,7 +106,7 @@ La chiamata **POST /{cognome}/filter** a differenza di quella di tipo **GET** d√
 ```json
     {}
 ```
-**5) POST /{cognome}/filter** (inserire il body formato JSON)
+**5) POST /{cognome}/filter** (localhost:8080/italia/filter) (inserire il body formato JSON)
 
 Per default si effettua un AND tra gli attributi, se si vuole una OR specificare con "logica":"or".
 
@@ -127,7 +128,7 @@ i operatori disponibili sono:
 
   "logica":"or",
   
-  "type":{"or":["com","org","net","gov","ru"]},
+  "type":{"or":["com","org","net","gov","it"]},
  
   "nation":{"eq":"IT"}
   
