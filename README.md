@@ -106,20 +106,28 @@ La chiamata **POST /{cognome}/filter** a differenza di quella di tipo **GET** d√
     {}
 ```
 **5) POST /{cognome}/filter** (inserire il body formato JSON)
+
 Per default si effettua un AND tra gli attributi, se si vuole una OR specificare con "logica":"or".
+
 i campi disponibili sono:
+
     domain, type, nation, alive, isDead, updateDate, createDate.
+    
 i operatori disponibili sono:
+
     "eq" "not" "and" "or"
+    
     "eq" e "not" chiedono un solo valore
+    
     invece "and" e "or" chiedono anche[] 
+    
 **esempio del body**
 ```json
 {
 
   "logica":"or",
   
-  "type":{"or":\["com","it","fr","uk"]},
+  "type":{"or":["com","it","fr","uk"]},
  
   "alive":{"eq":"true"}
   
