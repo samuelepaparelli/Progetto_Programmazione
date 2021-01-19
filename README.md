@@ -112,7 +112,7 @@ Per default si effettua un AND tra gli attributi, se si vuole una OR specificare
 
 i campi disponibili sono:
 
-    domain, type, nation, alive, isDead, updateDate, createDate.
+    domain, type, country, alive, isDead, updateDate, createDate.
     
 i operatori disponibili sono:
 
@@ -130,7 +130,7 @@ i operatori disponibili sono:
   
   "type":{"or":["com","org","net","gov","it"]},
  
-  "nation":{"eq":"IT"}
+  "country":{"eq":"IT"}
   
 }
 ```
