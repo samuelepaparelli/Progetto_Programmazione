@@ -36,9 +36,11 @@ La chiamata **POST /{cognome}/filter** a differenza di quella di tipo **GET** d�
 
 ## CONFIGURAZIONE:
 
- - Per utilizzare il programma è necessario importare il progetto dentro Eclipse.
- - Lanciare il progetto come SpringBootApplication,
- - Lanciare Postman per effettuare richieste GET/POST disponibili nelle rotte.
+ - Per utilizzare il programma è necessario scaricare il progetto sul vostro computer cliccando su **Code** e poi su **Download ZIP**.
+ - All'interno della cartella **target** del progetto è presente un file `.jar`.
+ 
+   Per eseguire il file digitate sul vostro terminale `java -jar .../target/Progetto_POO-0.0.1-SNAPSHOT.jar`
+ - Aprire Postman per effettuare richieste GET/POST disponibili nelle rotte sulla porta `localhost:8080`.
  
 ### ESEMPI
 
