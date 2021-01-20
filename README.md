@@ -1,18 +1,19 @@
 # Progetto_Programmazione
 ## Introduzione:
 
-L'obbiettivo del progetto è stato quello di creare una REST API che implementasse l'API DOMAINS DB.
+Abbiamo creato un Web Service che tramite REST API permette all'utente di sapere quanti siti contengono il suo cognome, di sapere le statistiche riguardanti i siti trovati e inoltre di filtrarli.
+I dati riguardanti i siti vengono presi dalla seguente API:
 
 API Reference: https://api.domainsdb.info/v1/
 
-DOMAINS DB permette l'accesso ad un lista di siti con le loro seguenti caratteristiche:
+L'API permette l'accesso ad un lista di siti con le loro seguenti caratteristiche:
 - Dominio
 - Data di creazione
 - Data di aggiornamento
 - Nazione di hosting
 - Se il sito è attivo o no
 
-Il nostro programma permette all'utente di sapere quanti siti contengono il suo cognome, di sapere le statistiche riguardanti i siti trovati e inoltre di filtrarli.
+
 
 ## ROTTE:
 
